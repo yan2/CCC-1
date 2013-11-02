@@ -33,7 +33,7 @@
     /* 
      This is where you choose where clicking 'back' sends you.
      */
-    [SceneManager goChapterSelect];
+    [SceneManager goMainMenu];
 }
 
 - (void)addBackButton {

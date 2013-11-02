@@ -21,33 +21,33 @@
 	return self;
 }
 
-- (void)createEdgesForWorld:(b2World*)world
-             fromScreenSize:(CGSize)screenSize {
-    
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0);
-    
-    self.body = world->CreateBody(&groundBodyDef);
-    
-    b2PolygonShape groundBox;		
-    
-    // bottom
-    groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(screenSize.width/PTM_RATIO,0));
-    self.body->CreateFixture(&groundBox,0);
-    
-    // top
-    groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO));
-    self.body->CreateFixture(&groundBox,0);
-    
-    // left
-    groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(0,0));
-    self.body->CreateFixture(&groundBox,0);
-    
-    // right
-    groundBox.SetAsEdge(b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,0));
-    
-    self.body->CreateFixture(&groundBox,0);
-}
+//- (void)createEdgesForWorld:(b2World*)world
+//             fromScreenSize:(CGSize)screenSize {
+//    
+//    b2BodyDef groundBodyDef;
+//    groundBodyDef.position.Set(0, 0);
+//    
+//    self.body = world->CreateBody(&groundBodyDef);
+//    
+//    b2PolygonShape groundBox;		
+//    
+//    // bottom
+//    groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(screenSize.width/PTM_RATIO,0));
+//    self.body->CreateFixture(&groundBox,0);
+//    
+//    // top
+//    groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO));
+//    self.body->CreateFixture(&groundBox,0);
+//    
+//    // left
+//    groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(0,0));
+//    self.body->CreateFixture(&groundBox,0);
+//    
+//    // right
+//    groundBox.SetAsEdge(b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,0));
+//    
+//    self.body->CreateFixture(&groundBox,0);
+//}
 
 - (void)createBodyInWorld:(b2World*)world 
                b2bodyType:(b2BodyType)b2bodyType

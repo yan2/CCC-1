@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 #import "GameConfig.h"
-#import "HelloWorldLayer.h"
+//#import "HelloWorldLayer.h"
 #import "RootViewController.h"
 
 #import "MainMenu.h"

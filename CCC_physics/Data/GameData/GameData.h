@@ -17,7 +17,7 @@
 @property (nonatomic, assign) BOOL sound;
 @property (nonatomic, assign) BOOL music;
 
--(id)initWithSelected:(int)game
+-(id)initWithSelectedChapter:(int)chapter
              selectedLevel:(int)level
                      sound:(BOOL)sound
                      music:(BOOL)music;
