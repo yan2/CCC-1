@@ -383,7 +383,6 @@
 		3E45311618243D4400B4EFDE /* Lat Capt Human-Walking0017.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E45302F18243D4400B4EFDE /* Lat Capt Human-Walking0017.png */; };
 		3E45311718243D4400B4EFDE /* Lat Capt Human-Walking0018.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E45303018243D4400B4EFDE /* Lat Capt Human-Walking0018.png */; };
 		3E45311818243D4400B4EFDE /* CCC_human.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E45303118243D4400B4EFDE /* CCC_human.plist */; };
-		3EC0B997182550CF004CC08D /* SceneName.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B989182550CF004CC08D /* SceneName.mm */; };
 		3EC0B998182550CF004CC08D /* SceneManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B98A182550CF004CC08D /* SceneManager.mm */; };
 		3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */; };
 		3EC0B9C318255119004CC08D /* Arrow-Normal-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */; };
@@ -450,6 +449,8 @@
 		3ECB2EC318258BAC00C82177 /* sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB2EB518258BAC00C82177 /* sprites.plist */; };
 		3ECB2EC418258BAC00C82177 /* Visible Boundary (Not include in final).png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB2EB618258BAC00C82177 /* Visible Boundary (Not include in final).png */; };
 		3ECB2EC518258BAC00C82177 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB2EB718258BAC00C82177 /* Back.png */; };
+		3ECB2ECD1825C9A400C82177 /* MazeLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */; };
+		3ECB2ECE1825C9A400C82177 /* HudLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB2ECC1825C9A400C82177 /* HudLayer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -992,9 +993,7 @@
 		3E45303018243D4400B4EFDE /* Lat Capt Human-Walking0018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lat Capt Human-Walking0018.png"; sourceTree = "<group>"; };
 		3E45303118243D4400B4EFDE /* CCC_human.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CCC_human.plist; path = ../CCC_human.plist; sourceTree = "<group>"; };
 		3EC0B97118254E8A004CC08D /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
-		3EC0B989182550CF004CC08D /* SceneName.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneName.mm; sourceTree = "<group>"; };
 		3EC0B98A182550CF004CC08D /* SceneManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneManager.mm; path = ../SceneManager.mm; sourceTree = "<group>"; };
-		3EC0B98E182550CF004CC08D /* SceneName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneName.h; sourceTree = "<group>"; };
 		3EC0B994182550CF004CC08D /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../SceneManager.h; sourceTree = "<group>"; };
 		3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-Normal-iPad-hd.png"; sourceTree = "<group>"; };
 		3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-Normal-iPad.png"; sourceTree = "<group>"; };
@@ -1082,6 +1081,10 @@
 		3ECB2EB518258BAC00C82177 /* sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = sprites.plist; path = ../sprites.plist; sourceTree = "<group>"; };
 		3ECB2EB618258BAC00C82177 /* Visible Boundary (Not include in final).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Visible Boundary (Not include in final).png"; path = "../Visible Boundary (Not include in final).png"; sourceTree = "<group>"; };
 		3ECB2EB718258BAC00C82177 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back.png; path = ../Back.png; sourceTree = "<group>"; };
+		3ECB2EC91825C9A400C82177 /* MazeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeLayer.h; path = ../MazeLayer.h; sourceTree = "<group>"; };
+		3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MazeLayer.mm; path = ../MazeLayer.mm; sourceTree = "<group>"; };
+		3ECB2ECB1825C9A400C82177 /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HudLayer.h; path = ../HudLayer.h; sourceTree = "<group>"; };
+		3ECB2ECC1825C9A400C82177 /* HudLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HudLayer.mm; path = ../HudLayer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1138,6 +1141,10 @@
 		3E452D4A1824063300B4EFDE /* CCC_physics */ = {
 			isa = PBXGroup;
 			children = (
+				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
+				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
+				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
+				3ECB2ECC1825C9A400C82177 /* HudLayer.mm */,
 				3EC0B98A182550CF004CC08D /* SceneManager.mm */,
 				3EC0B994182550CF004CC08D /* SceneManager.h */,
 				3ECB2EC818258C1800C82177 /* Sprites */,
@@ -2084,8 +2091,6 @@
 				3ECB2DFD18256F2B00C82177 /* ChapterSelect.mm */,
 				3EC0B9DA182554B8004CC08D /* MainMenu.mm */,
 				3EC0B9DB182554B8004CC08D /* MainMenu.h */,
-				3EC0B989182550CF004CC08D /* SceneName.mm */,
-				3EC0B98E182550CF004CC08D /* SceneName.h */,
 				3ECB2EC718258C0900C82177 /* Layers */,
 			);
 			name = Scenes;
@@ -2484,7 +2489,6 @@
 				3ECB2DFB18256EF400C82177 /* CCScrollLayer.m in Sources */,
 				3E452DEB1824063500B4EFDE /* CCScheduler.m in Sources */,
 				3E452DE51824063500B4EFDE /* CCRibbon.m in Sources */,
-				3EC0B997182550CF004CC08D /* SceneName.mm in Sources */,
 				3ECB2DFE18256F2B00C82177 /* ChapterSelect.mm in Sources */,
 				3E452D821824063400B4EFDE /* CCActionProgressTimer.m in Sources */,
 				3EC0B9DC182554B8004CC08D /* MainMenu.mm in Sources */,
@@ -2537,6 +2541,7 @@
 				3E452E851824063600B4EFDE /* ZFont.m in Sources */,
 				3E452E7E1824063600B4EFDE /* FontManager.m in Sources */,
 				3E452E731824063600B4EFDE /* SimpleAudioEngine.m in Sources */,
+				3ECB2ECE1825C9A400C82177 /* HudLayer.mm in Sources */,
 				3E452DA71824063400B4EFDE /* CCGrabber.m in Sources */,
 				3E452E781824063600B4EFDE /* FontLabel.m in Sources */,
 				3E452D791824063400B4EFDE /* CCActionInterval.m in Sources */,
@@ -2587,6 +2592,7 @@
 				3E452E331824063600B4EFDE /* ES1Renderer.m in Sources */,
 				3ECB2DE918256BE500C82177 /* Chapter.m in Sources */,
 				3E452F201824063800B4EFDE /* AppDelegate.mm in Sources */,
+				3ECB2ECD1825C9A400C82177 /* MazeLayer.mm in Sources */,
 				3E452DF71824063500B4EFDE /* CCSpriteFrameCache.m in Sources */,
 				3ECB2E0E18257A9800C82177 /* LevelParser.m in Sources */,
 				3E452EF51824063700B4EFDE /* b2DistanceJoint.cpp in Sources */,

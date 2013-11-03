@@ -23,16 +23,16 @@
         _actors = [CCSpriteBatchNode batchNodeWithFile:@"C.png"];
         [_actors.texture setAliasTexParameters];
         [self addChild:_actors z:-5];
-        [self initHuman];
+//        [self initHuman];
     }
     return self;
 }
 -(void)update:(ccTime)dt {
-    [_human update:dt];
+//    [_human update:dt];
 //    [self checkForAndResolveCollisions:_human];
 
-    [self updatePositions];
-    [self setViewpointCenter:_human.position];
+//    [self updatePositions];
+//    [self setViewpointCenter:_human.position];
 }
 
 
@@ -54,11 +54,11 @@
     self.position = viewPoint;
 }
 
--(void)updatePositions {
-    float posX = MIN(_tileMap.mapSize.width * _tileMap.tileSize.width - _human.centerToSides, MAX(_human.centerToSides, _human.desiredPosition.x));
-    float posY = MIN(3 * _tileMap.tileSize.height + _human.centerToBottom, MAX(_human.centerToBottom, _human.desiredPosition.y));
-    _human.position = ccp(posX, posY);
-}
+//-(void)updatePositions {
+//    float posX = MIN(_tileMap.mapSize.width * _tileMap.tileSize.width - _human.centerToSides, MAX(_human.centerToSides, _human.desiredPosition.x));
+//    float posY = MIN(3 * _tileMap.tileSize.height + _human.centerToBottom, MAX(_human.centerToBottom, _human.desiredPosition.y));
+//    _human.position = ccp(posX, posY);
+//}
 
 //- (CGPoint)tileCoordForPosition:(CGPoint)position {
 //    float x = floor(position.x / _tileMap.tileSize.width);
@@ -207,13 +207,13 @@
     [self unscheduleUpdate];
 }
 
--(void)initHuman {
-    _human = [HumanC node];
-    [_actors addChild:_human];
-    _human.position = ccp(_human.centerToSides+100, 500);
-    _human.desiredPosition = _human.position;
-    [_human idle];
-}
+//-(void)initHuman {
+//    _human = [HumanC node];
+//    [_actors addChild:_human];
+//    _human.position = ccp(_human.centerToSides+100, 500);
+//    _human.desiredPosition = _human.position;
+//    [_human idle];
+//}
 
 //-(void)initObstacles
 //{
@@ -234,22 +234,22 @@
 //        [robot idle];
 //    }
 //}
-
--(void)initObstacles
-{
-//    <object x="1120" y="449" width="193" height="95"/>
-//    <object x="863" y="447" width="192" height="97"/>
-    
-    Obstacles *collision = [Obstacles node];
-    Obstacles *collision2 = [Obstacles node];
-    
-    
-    collision.position = ccp(1120, 449);
-    
-    collision2.position = ccp(863, 447);
-    [_collisions addObject:collision2];
-    [_collisions addObject:collision];
-}
+//
+//-(void)initObstacles
+//{
+////    <object x="1120" y="449" width="193" height="95"/>
+////    <object x="863" y="447" width="192" height="97"/>
+//    
+//    Obstacles *collision = [Obstacles node];
+//    Obstacles *collision2 = [Obstacles node];
+//    
+//    
+//    collision.position = ccp(1120, 449);
+//    
+//    collision2.position = ccp(863, 447);
+//    [_collisions addObject:collision2];
+//    [_collisions addObject:collision];
+//}
 
 -(void)initTileMap {
     _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"prac_map.tmx"];
@@ -266,38 +266,38 @@
 }
 
 
--(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [_human superPower];
-    
-    if (_human.actionState == kActionStateWalk)
-    {
-        Obstacles *robot;
-        CCARRAY_FOREACH(_collisions, robot)
-        {
-                if (fabsf(_human.position.y - robot.position.y) < 10)
-                {
-                    if (CGRectIntersectsRect(_human.attackBox.actual, robot.hitBox.actual))
-                    {
-                        [robot hurtWithDamage:_hero.damage];
-                    }
-                }
-            }
-        }
-    }
-}
+//-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [_human superPower];
+//    
+//    if (_human.actionState == kActionStateWalk)
+//    {
+//        Obstacles *robot;
+//        CCARRAY_FOREACH(_collisions, robot)
+//        {
+//                if (fabsf(_human.position.y - robot.position.y) < 10)
+//                {
+//                    if (CGRectIntersectsRect(_human.attackBox.actual, robot.hitBox.actual))
+//                    {
+//                        [robot hurtWithDamage:_hero.damage];
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 
--(void)DirectionPad:(DirectionPad *)DirectionPad didChangeDirectionTo:(CGPoint)direction {
-    [_human walkWithDirection:direction];
-}
--(void)DirectionPadTouchEnded:(DirectionPad *)DirectionPad {
-    if (_human.actionState ==kActionStateWalk) {
-        [_human idle];
-    }
-}
-
--(void)DirectionPad:(DirectionPad *)DirectionPad isHoldingDirection:(CGPoint)direction {
-    [_human walkWithDirection:direction];
-}
+//-(void)DirectionPad:(DirectionPad *)DirectionPad didChangeDirectionTo:(CGPoint)direction {
+//    [_human walkWithDirection:direction];
+//}
+//-(void)DirectionPadTouchEnded:(DirectionPad *)DirectionPad {
+//    if (_human.actionState ==kActionStateWalk) {
+//        [_human idle];
+//    }
+//}
+//
+//-(void)DirectionPad:(DirectionPad *)DirectionPad isHoldingDirection:(CGPoint)direction {
+//    [_human walkWithDirection:direction];
+//}
 @end

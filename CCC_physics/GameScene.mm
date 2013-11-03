@@ -13,91 +13,54 @@
 @implementation GameScene  
 @synthesize iPad, device;
 
-////- (void) setupPhysicsWorld {
-////    
-////    b2Vec2 gravity = b2Vec2(kHorizontalGravity, kVerticalGravity); // Set in TRBox2DConstants.h
+//- (void) setupPhysicsWorld {
+//    
+//    b2Vec2 gravity = b2Vec2(kHorizontalGravity, kVerticalGravity); // Set in TRBox2DConstants.h
 ////    bool doSleep = true;
-////    world = new b2World(gravity, doSleep);
-////    debugDraw = new GLESDebugDraw(PTM_RATIO);
-////    world->SetDebugDraw(debugDraw);
-////    uint32 flags = 0;
-////    flags += b2DebugDraw::e_shapeBit;
-////    flags += b2DebugDraw::e_jointBit;
-////    //		flags += b2DebugDraw::e_aabbBit;
-////    //		flags += b2DebugDraw::e_pairBit;
-////    //		flags += b2DebugDraw::e_centerOfMassBit;
-////    debugDraw->SetFlags(flags);
-////}
-////- (void) limitWorldToScreen {
-////    
-////    CGSize screenSize = [CCDirector sharedDirector].winSize;
-////    TRBox2D *limits = [[[TRBox2D alloc] init] autorelease];
-////    [limits createEdgesForWorld:world fromScreenSize:screenSize];
-////    [self addChild:limits];
-////}
-////- (void)tick: (ccTime) dt {
-////    
-////	//It is recommended that a fixed time step is used with Box2D for stability
-////	//of the simulation, however, we are using a variable time step here.
-////	//You need to make an informed choice, the following URL is useful
-////	//http://gafferongames.com/game-physics/fix-your-timestep/
-////    
-////	int32 velocityIterations = 8;
-////	int32 positionIterations = 1;
-////    
-////	// Instruct the world to perform a single step of simulation. It is
-////	// generally best to keep the time step and iterations fixed.
-////	world->Step(dt, velocityIterations, positionIterations);
-////    
-////	//Iterate over the bodies in the physics world
-////	for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
-////	{
-////		if (b->GetUserData() != NULL) {
-////			//Synchronize the AtlasSprites position and rotation with the corresponding body
-////			CCSprite *myActor = (CCSprite*)b->GetUserData();
-////			myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO);
-////			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
-////		}
-////	}
-////}
-//- (void)draw {
-//    
-//	glDisable(GL_TEXTURE_2D);
-//	glDisableClientState(GL_COLOR_ARRAY);
-//	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-//    
-//	world->DrawDebugData();  // comment this out to get rid of Box2D debug drawing
-//    
-//	glEnable(GL_TEXTURE_2D);
-//	glEnableClientState(GL_COLOR_ARRAY);
-//	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-//}
 //
-//- (void)createCircleAtPoint:(CGPoint)point
-//                 spriteFile:(NSString*)spriteFile
-//                   bodyType:(b2BodyType)bodyType {
+//    world = new b2World(gravity);
 //    
-//    TRBox2D *circle = [TRBox2D spriteWithFile:spriteFile];
-//    
-//    [circle setPosition:point];
-//    
-//    [circle createBodyInWorld:world b2bodyType:bodyType angle:0 allowSleep:YES fixedRotation:NO bullet:NO];
-//    
-//    [self addChild:circle];
 //}
-//- (void)onBack: (id) sender {
-//    /* 
-//     This is where you choose where clicking 'back' sends you.
-//     */
-//    [SceneManager goLevelSelect];
+//- (void) limitWorldToScreen {
+//    
+//    CGSize screenSize = [CCDirector sharedDirector].winSize;
+//    TRBox2D *limits = [[[TRBox2D alloc] init] autorelease];
+//    [limits createEdgesForWorld:world fromScreenSize:screenSize];
+//    [self addChild:limits];
 //}
+- (void)tick: (ccTime) dt {
+    
+	//It is recommended that a fixed time step is used with Box2D for stability
+	//of the simulation, however, we are using a variable time step here.
+	//You need to make an informed choice, the following URL is useful
+	//http://gafferongames.com/game-physics/fix-your-timestep/
+    
+//	int32 velocityIterations = 8;
+//	int32 positionIterations = 1;
+//    
+//	// Instruct the world to perform a single step of simulation. It is
+//	// generally best to keep the time step and iterations fixed.
+//	world->Step(dt, velocityIterations, positionIterations);
+//    
+//	//Iterate over the bodies in the physics world
+//	for (b2Body* b = world->GetBodyList(); b; b = b->GetNext())
+//	{
+//		if (b->GetUserData() != NULL) {
+//			//Synchronize the AtlasSprites position and rotation with the corresponding body
+//			CCSprite *myActor = (CCSprite*)b->GetUserData();
+//			myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO);
+//			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
+//		}
+//	}
+}
+
+
 
 - (void)onBack: (id) sender {
-    /*
-     This is where you choose where clicking 'back' sends you.
-     */
     [SceneManager goLevelSelect];
 }
+
+
 - (void)addBackButton {
     
     NSString *normal = [NSString stringWithFormat:@"Arrow-Normal-%@.png", self.device];
@@ -163,7 +126,8 @@
         
         //  Put a 'back' button in the scene
         [self addBackButton];
-//
+
+        [self createScene];
 //        [self setupPhysicsWorld];
 //        [self limitWorldToScreen];
         
@@ -173,5 +137,33 @@
     }
     return self;
 }
+
+
+-(void) createScene {
+    
+    _mazeLayer = [MazeLayer node];
+    [self addChild:_mazeLayer z:0];
+    _hudLayer = [HudLayer node];
+    [self addChild:_hudLayer z:1];
+    
+    _hudLayer.dPad.delegate = _mazeLayer;
+    _mazeLayer.hud = _hudLayer;
+    
+}
++(CCScene *) scene
+{
+	// 'scene' is an autorelease object.
+	CCScene *scene = [CCScene node];
+	
+	// 'layer' is an autorelease object.
+	GameScene *layer = [GameScene node];
+	
+	// add layer as a child to scene
+	[scene addChild: layer];
+	
+	// return the scene
+	return scene;
+}
+
 
 @end

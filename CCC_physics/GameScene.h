@@ -8,7 +8,8 @@
 #import "SceneManager.h"
 #import "Box2D.h"
 #import "TRBox2D.h"
-
+#import "MazeLayer.h"
+#import "HudLayer.h"
 
 @interface GameScene : CCLayer {
     b2World *world;
@@ -19,7 +20,8 @@
 @property (nonatomic, assign) BOOL iPad;
 @property (nonatomic, assign) NSString *device;
 
-
+@property (nonatomic)MazeLayer *mazeLayer;
+@property(nonatomic)HudLayer *hudLayer;
 
 
 @end

@@ -15,6 +15,6 @@
 @interface HudLayer : CCLayer {
     
 }
-@property(nonatomic,weak)DirectionPad *dPad;
+@property(nonatomic)DirectionPad *dPad;
 
 @end

@@ -30,18 +30,20 @@
 	// Uncomment the following code if you Application only supports landscape mode
 	//
 //#if GAME_AUTOROTATION == kGameAutorotationUIViewController
+    if (GAME_AUTOROTATION == kGameAutorotationUIViewController) {
+        CC_ENABLE_DEFAULT_GL_STATES();
+        CCDirector *director = [CCDirector sharedDirector];
+        CGSize size = [director winSize];
+        CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
+        sprite.position = ccp(size.width/2, size.height/2);
+        sprite.rotation = -90;
+        [sprite visit];
+        [[director openGLView] swapBuffers];
+        CC_ENABLE_DEFAULT_GL_STATES();
 
-	CC_ENABLE_DEFAULT_GL_STATES();
-	CCDirector *director = [CCDirector sharedDirector];
-	CGSize size = [director winSize];
-	CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
-	sprite.position = ccp(size.width/2, size.height/2);
-	sprite.rotation = -90;
-	[sprite visit];
-	[[director openGLView] swapBuffers];
-	CC_ENABLE_DEFAULT_GL_STATES();
-	
-//#endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
+    }
+	//
+//#endif // GAME_AUTOROTATION == kGameAutorotationUIViewController
 }
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
@@ -87,15 +89,17 @@
 	// By default, this template only supports Landscape orientations.
 	// Edit the RootViewController.m file to edit the supported orientations.
 	//
-#if GAME_AUTOROTATION == kGameAutorotationUIViewController
-	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
-#else
-	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
-#endif
+//#if GAME_AUTOROTATION == kGameAutorotationUIViewController
+//	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+//#else
+//	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
+//#endif
 	
 	[director setAnimationInterval:1.0/60];
 	[director setDisplayFPS:YES];
-	
+	if(GAME_AUTOROTATION == kGameAutorotationUIViewController) {
+        [director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
+    }
 	
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];
