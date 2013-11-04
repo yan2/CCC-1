@@ -383,6 +383,8 @@
 		3E45311618243D4400B4EFDE /* Lat Capt Human-Walking0017.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E45302F18243D4400B4EFDE /* Lat Capt Human-Walking0017.png */; };
 		3E45311718243D4400B4EFDE /* Lat Capt Human-Walking0018.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E45303018243D4400B4EFDE /* Lat Capt Human-Walking0018.png */; };
 		3E45311818243D4400B4EFDE /* CCC_human.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E45303118243D4400B4EFDE /* CCC_human.plist */; };
+		3E97293B1828379A00F988F1 /* practice_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3E97293A1828379A00F988F1 /* practice_map.tmx */; };
+		3E97293D182837AC00F988F1 /* Boundaries.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E97293C182837AC00F988F1 /* Boundaries.png */; };
 		3EC0B998182550CF004CC08D /* SceneManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B98A182550CF004CC08D /* SceneManager.mm */; };
 		3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */; };
 		3EC0B9C318255119004CC08D /* Arrow-Normal-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */; };
@@ -992,6 +994,8 @@
 		3E45302F18243D4400B4EFDE /* Lat Capt Human-Walking0017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lat Capt Human-Walking0017.png"; sourceTree = "<group>"; };
 		3E45303018243D4400B4EFDE /* Lat Capt Human-Walking0018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lat Capt Human-Walking0018.png"; sourceTree = "<group>"; };
 		3E45303118243D4400B4EFDE /* CCC_human.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CCC_human.plist; path = ../CCC_human.plist; sourceTree = "<group>"; };
+		3E97293A1828379A00F988F1 /* practice_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = practice_map.tmx; sourceTree = "<group>"; };
+		3E97293C182837AC00F988F1 /* Boundaries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boundaries.png; sourceTree = "<group>"; };
 		3EC0B97118254E8A004CC08D /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
 		3EC0B98A182550CF004CC08D /* SceneManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneManager.mm; path = ../SceneManager.mm; sourceTree = "<group>"; };
 		3EC0B994182550CF004CC08D /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../SceneManager.h; sourceTree = "<group>"; };
@@ -1141,6 +1145,8 @@
 		3E452D4A1824063300B4EFDE /* CCC_physics */ = {
 			isa = PBXGroup;
 			children = (
+				3E97293C182837AC00F988F1 /* Boundaries.png */,
+				3E97293A1828379A00F988F1 /* practice_map.tmx */,
 				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
 				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
 				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
@@ -2234,6 +2240,7 @@
 				3E4530AC18243D4400B4EFDE /* Lat Capt Human-Standing0051.png in Resources */,
 				3ECB2E8E18257CB800C82177 /* 2Star-Normal-iPhone-hd.png in Resources */,
 				3E4530BB18243D4400B4EFDE /* Lat Capt Human-Standing0066.png in Resources */,
+				3E97293D182837AC00F988F1 /* Boundaries.png in Resources */,
 				3E45311218243D4400B4EFDE /* Lat Capt Human-Walking0013.png in Resources */,
 				3E45310218243D4400B4EFDE /* Lat Capt Human-To Crawl Transition0028.png in Resources */,
 				3E45306618243D4400B4EFDE /* Lat Capt Human-Running0006.png in Resources */,
@@ -2313,6 +2320,7 @@
 				3E45305918243D4400B4EFDE /* Lat Capt Human-Leaping0003.png in Resources */,
 				3E45308A18243D4400B4EFDE /* Lat Capt Human-Standing0017.png in Resources */,
 				3E45305818243D4400B4EFDE /* Lat Capt Human-Leaping0002.png in Resources */,
+				3E97293B1828379A00F988F1 /* practice_map.tmx in Resources */,
 				3E45311518243D4400B4EFDE /* Lat Capt Human-Walking0016.png in Resources */,
 				3EC0B9CA18255119004CC08D /* StickyNote-iPad-hd.png in Resources */,
 				3E4530B418243D4400B4EFDE /* Lat Capt Human-Standing0059.png in Resources */,

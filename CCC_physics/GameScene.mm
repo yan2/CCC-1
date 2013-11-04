@@ -13,14 +13,14 @@
 @implementation GameScene  
 @synthesize iPad, device;
 
-//- (void) setupPhysicsWorld {
-//    
-//    b2Vec2 gravity = b2Vec2(kHorizontalGravity, kVerticalGravity); // Set in TRBox2DConstants.h
-////    bool doSleep = true;
-//
-//    world = new b2World(gravity);
-//    
-//}
+- (void) setupPhysicsWorld {
+    
+    b2Vec2 gravity = b2Vec2(kHorizontalGravity, kVerticalGravity); // Set in TRBox2DConstants.h
+//    bool doSleep = true;
+
+    world = new b2World(gravity);
+    
+}
 //- (void) limitWorldToScreen {
 //    
 //    CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -98,37 +98,12 @@
         // Determine Screen Size
         CGSize screenSize = [CCDirector sharedDirector].winSize;  
         
-        // Calculate Large Font Size
-        int largeFont = screenSize.height / kFontScaleLarge; 
-        
-        
-        GameData *gameData = [GameDataParser loadData];
-        
-//        int selectedChapter = gameData.selectedChapter;
-        int selectedLevel = gameData.selectedLevel;
-        
-        Levels *levels = [LevelParser loadLevelsForChapter:1];
-        
-        for (Level *level in levels.levels) {
-            if (level.number == selectedLevel) {
-                
-                NSString *data = [NSString stringWithFormat:@"%@",level.data];
-                
-                CCLabelTTF *label = [CCLabelTTF labelWithString:data
-                                                       fontName:@"Marker Felt" 
-                                                       fontSize:largeFont]; 
-                label.position = ccp( screenSize.width/2, screenSize.height/2);  
-                
-                // Add label to this scene
-                [self addChild:label z:0]; 
-            }
-        }
-        
+  
         //  Put a 'back' button in the scene
         [self addBackButton];
 
         [self createScene];
-//        [self setupPhysicsWorld];
+        [self setupPhysicsWorld];
 //        [self limitWorldToScreen];
         
         // schedule Box2D updates

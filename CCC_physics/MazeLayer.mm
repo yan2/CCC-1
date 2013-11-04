@@ -252,15 +252,15 @@
 //}
 
 -(void)initTileMap {
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"prac_map.tmx"];
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"practice_map.tmx"];
     for (CCTMXLayer *child in [_tileMap children]) {
         [[child texture] setAliasTexParameters];
     }
-    _obstacles = [_tileMap layerNamed:@"back"];
-    CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"collisions"];
-    _collisionArray = [objects objects];
-    
-    
+    _obstacles = [_tileMap layerNamed:@"boundaries"];
+//    CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"collisions"];
+//    _collisionArray = [objects objects];
+//    
+    _tileMap.scale = .5;
     
     [self addChild:_tileMap z:-6];
 }
