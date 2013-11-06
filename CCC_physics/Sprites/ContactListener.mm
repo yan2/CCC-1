@@ -40,7 +40,7 @@ void ContactListener::EndContact(b2Contact *contact) {
         CCLOG(@"-----> Player lost contact with platform!");
     }
     if (IS_GAMEOVERTILE(o1, o2) && IS_PLAYER(o1, o2)) {
-        CCLOG(@"~!~!~!~ Player made contact with death tiles brah");
+        CCLOG(@"~!~!~!~ Player lost contact with death tiles brah");
     }
 }
 

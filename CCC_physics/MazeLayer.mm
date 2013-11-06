@@ -39,7 +39,8 @@
 			   friction:(long)f
 				density:(long)dens
 			restitution:(long)rest
-				  boxId:(int)boxId {
+				  boxId:(int)boxId
+               uniqueID:(int)uniqueID                  {
     
 	// Define the dynamic body.
 	//Set up a 1m squared box in the physics world
@@ -51,9 +52,18 @@
     
 	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
     
-    GameObject *platform = [[GameObject alloc] init];
-    [platform setType:kGameObjectPlatform];
-	bodyDef.userData = platform;
+    if (uniqueID == 1) {
+        GameObject *platform = [[GameObject alloc] init];
+        [platform setType:kGameObjectPlatform];
+        bodyDef.userData = platform;
+    }
+    NSLog(@"abouttoif");
+    if (uniqueID == 2) {
+         NSLog(@"insideif");
+        GameObject *gameOverTile= [[GameObject alloc] init];
+        [gameOverTile setType:kGameObjectGameOverTile];
+        bodyDef.userData = gameOverTile;
+    }
     
 	b2Body *body = world->CreateBody(&bodyDef);
     
@@ -94,7 +104,8 @@
 					friction:1.5f
 					 density:0.0f
 				 restitution:0
-					   boxId:-1];
+					   boxId:-1
+                    uniqueID:1];
 	}
 }
 
@@ -120,7 +131,8 @@
 					friction:1.5f
 					 density:0.0f
 				 restitution:0
-					   boxId:-1];
+					   boxId:-1
+                        uniqueID:2];
 	}
 }
 
