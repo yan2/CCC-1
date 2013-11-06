@@ -562,6 +562,7 @@
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
 		5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.mm */; };
 		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
+		5BF2F81E182ACEE100413FFD /* Test_PracMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2F81D182ACEE100413FFD /* Test_PracMap.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1314,6 +1315,7 @@
 		5BCB88821829E6A4009D6DBF /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
 		5BCB88851829E702009D6DBF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		5BCB88861829E702009D6DBF /* Player.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Player.mm; sourceTree = "<group>"; };
+		5BF2F81D182ACEE100413FFD /* Test_PracMap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_PracMap.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2461,6 +2463,7 @@
 		5BCB88711829E412009D6DBF /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2F81D182ACEE100413FFD /* Test_PracMap.tmx */,
 				5B274316182A1A6100942895 /* clear_map.tmx */,
 				3EBD9147182AAEAD00ABC143 /* test_map.tmx */,
 				3ECB2EB718258BAC00C82177 /* Back.png */,
@@ -2882,6 +2885,7 @@
 				3E4530C318243D4400B4EFDE /* Lat Capt Human-Standing0074.png in Resources */,
 				3E45310118243D4400B4EFDE /* Lat Capt Human-To Crawl Transition0027.png in Resources */,
 				3E4530CC18243D4400B4EFDE /* Lat Capt Human-Stand Up0003.png in Resources */,
+				5BF2F81E182ACEE100413FFD /* Test_PracMap.tmx in Resources */,
 				3E4530AD18243D4400B4EFDE /* Lat Capt Human-Standing0052.png in Resources */,
 				3E4530D818243D4400B4EFDE /* Lat Capt Human-Stand Up0015.png in Resources */,
 				3E45310B18243D4400B4EFDE /* Lat Capt Human-Walking0006.png in Resources */,

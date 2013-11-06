@@ -13,6 +13,8 @@
 @property(nonatomic,strong)id superPowerAction;
 @property(nonatomic,strong)id walkAction;
 @property(nonatomic,strong)id failAction;
+@property(nonatomic,strong)id crawlAction;
+
 
 
 //states
@@ -38,5 +40,6 @@
 -(void)superPower;//attack
 //-(void)hurtWithDamage:(float)damage;
 -(void)walk;
+-(void) crawl;
 
 @end

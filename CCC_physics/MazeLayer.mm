@@ -174,7 +174,7 @@
 
 -(void)initTileMap {
    
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"test_map.tmx"];
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"Test_PracMap.tmx"];
     _tileMap.scale = .5;
 	_tileMap.anchorPoint = ccp(0, 0);
 	[self addChild:_tileMap];
@@ -219,9 +219,11 @@
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
+    firstTouch = location;
     if (location.x <= 2000 / 2) {
         [player walk];
     }
+    
     // [player jump];
     
 	return TRUE;
@@ -233,6 +235,21 @@
     if (player.actionState ==kActionStateWalk) {
         [player idle];
     }
+    NSSet *allTouches = [event allTouches];
+        UITouch * currentTouch = [[allTouches allObjects] objectAtIndex:0];
+        CGPoint location = [currentTouch locationInView: [currentTouch view]];
+        location = [[CCDirector sharedDirector] convertToGL:location];
+    
+        //Swipe Detection Part 2
+        lastTouch = location;
+    
+        //Minimum length of the swipe
+        float swipeLength = ccpDistance(firstTouch, lastTouch);
+    
+        //Check if the swipe is a left swipe and long enough
+        if (firstTouch.x > lastTouch.x && swipeLength > 60) {
+        [player crawl];
+        }
 }
 
 
