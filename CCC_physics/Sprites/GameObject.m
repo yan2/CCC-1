@@ -21,6 +21,21 @@
     return self;
 }
 
+-(id)initWithSpriteFrameName:(NSString*)spriteFrameName
+{
+    if ( self = [super init] ){
+        if ((self = [super initWithSpriteFrameName:spriteFrameName])) {
+            NSLog(@"Super initing with sprite frame");
+            NSAssert(spriteFrameName!=nil, @"Invalid spriteFrameName for sprite");
+            
+            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:spriteFrameName];
+            return [super initWithSpriteFrame:frame];
+        }
+        
+    }
+
+}
+
 - (void)dealloc
 {
     [super dealloc];
