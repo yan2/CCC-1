@@ -76,7 +76,7 @@
         
     }
     else {
-        back.position = ccp(32, 32);
+        back.position = ccp(32, 270);
     }
     
     [self addChild:back];        
