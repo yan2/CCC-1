@@ -115,8 +115,8 @@
 	int x, y, w, h;
 	for (objPoint in [objects objects]) {
         NSLog(@"game over objects detected");
-		x = [[objPoint valueForKey:@"x"] intValue];
-		y = [[objPoint valueForKey:@"y"] intValue];
+		x = [[objPoint valueForKey:@"x"] intValue]/2;
+		y = [[objPoint valueForKey:@"y"] intValue]/2;
 		w = [[objPoint valueForKey:@"width"] intValue]/2;
 		h = [[objPoint valueForKey:@"height"] intValue]/2;
         
@@ -174,7 +174,7 @@
 
 -(void)initTileMap {
    
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"Test_PracMap.tmx"];
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"clear_map.tmx"];
     _tileMap.scale = .5;
 	_tileMap.anchorPoint = ccp(0, 0);
 	[self addChild:_tileMap];
