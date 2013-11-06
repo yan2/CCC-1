@@ -8,25 +8,33 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Player.h"
+#import "ContactListener.h"
 //#import "HumanC.h"
 //#import "DirectionPad.h"
 #import "HudLayer.h"
 //#import "Obstacles.h"
 
 
-@interface MazeLayer : CCLayer <DirectionPadDelegate>{
+@interface MazeLayer : CCLayer <DirectionPadDelegate> {
     CCTMXTiledMap *_tileMap;
     CCSpriteBatchNode *_actors;
 //    HumanC *_human;
+    Player *player;
+    ContactListener *contactListener;
+    b2World* world;
     CCTMXLayer *_obstacles;
     NSMutableDictionary    *_objects;
     NSMutableArray *_collisionArray;
 }
 
--(CGRect)collisionBoundingBox;
-
 @property(nonatomic)HudLayer *hud;
 @property(nonatomic)CCArray *collisions;
+
+-(CGRect)collisionBoundingBox;
+
++(id) scene;
+
 
 
 

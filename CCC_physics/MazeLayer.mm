@@ -8,21 +8,166 @@
 
 #import "MazeLayer.h"
 
+@interface MazeLayer(Private)
+-(void) setupPhysicsWorld;
+@end
 
 @implementation MazeLayer
+
+
+
++(id) scene
+{
+	// 'scene' is an autorelease object.
+	CCScene *scene = [CCScene node];
+    
+	// 'layer' is an autorelease object.
+	MazeLayer *layer = [MazeLayer node];
+    
+	// add layer as a child to scene
+	[scene addChild: layer];
+    
+	// return the scene
+	return scene;
+}
+
+
+- (void) makeBox2dObjAt:(CGPoint)p
+			   withSize:(CGPoint)size
+				dynamic:(BOOL)d
+			   rotation:(long)r
+			   friction:(long)f
+				density:(long)dens
+			restitution:(long)rest
+				  boxId:(int)boxId {
+    
+	// Define the dynamic body.
+	//Set up a 1m squared box in the physics world
+	b2BodyDef bodyDef;
+    //	bodyDef.angle = r;
+    
+	if(d)
+		bodyDef.type = b2_dynamicBody;
+    
+	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
+    
+    GameObject *platform = [[GameObject alloc] init];
+    [platform setType:kGameObjectPlatform];
+	bodyDef.userData = platform;
+    
+	b2Body *body = world->CreateBody(&bodyDef);
+    
+	// Define another box shape for our dynamic body.
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(size.x/2/PTM_RATIO, size.y/2/PTM_RATIO);
+    
+	// Define the dynamic body fixture.
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &dynamicBox;
+	fixtureDef.density = dens;
+	fixtureDef.friction = f;
+	fixtureDef.restitution = rest;
+	body->CreateFixture(&fixtureDef);
+}
+
+
+
+- (void) drawCollisionTiles {
+	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"collisions"];
+	NSMutableDictionary * objPoint;
+    
+	int x, y, w, h;
+	for (objPoint in [objects objects]) {
+        NSLog(@"collision objects detected");
+		x = [[objPoint valueForKey:@"x"] intValue];
+		y = [[objPoint valueForKey:@"y"] intValue];
+		w = [[objPoint valueForKey:@"width"] intValue]/2;
+		h = [[objPoint valueForKey:@"height"] intValue]/2;
+        
+		CGPoint _point=ccp(x+w/2,y+h);
+		CGPoint _size=ccp(w,h);
+        
+		[self makeBox2dObjAt:_point
+					withSize:_size
+					 dynamic:false
+					rotation:0
+					friction:1.5f
+					 density:0.0f
+				 restitution:0
+					   boxId:-1];
+	}
+}
+
+-(void) setupPhysicsWorld {
+    
+    b2Vec2 gravity = b2Vec2(0.0f, -9.8f);
+    world = new b2World(gravity);
+
+    contactListener = new ContactListener();
+    world->SetContactListener(contactListener);
+}
+
+
+-(void)initTileMap {
+    //    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"test_map.tmx"];
+    //    for (CCTMXLayer *child in [_tileMap children]) {
+    //        [[child texture] setAliasTexParameters];
+    //    }
+    //    _obstacles = [_tileMap layerNamed:@"boundaries"];
+    ////    CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"collisions"];
+    ////    _collisionArray = [objects objects];
+    ////
+    //    _tileMap.scale = .5;
+    //
+   // [self addChild:_tileMap z:-6];
+    
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"test_map.tmx"];
+    _tileMap.scale = .5;
+	_tileMap.anchorPoint = ccp(0, 0);
+	[self addChild:_tileMap];
+}
+
+
+
+-(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    CGPoint location = [touch locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
+    if (location.x <= 2000 / 2) {
+        [player moveRight];
+    } else {
+        [player jump];
+    }
+	return TRUE;
+}
+
+
+
 
 
 
 -(id)init {
     if ((self = [super init])) {
         self.isTouchEnabled = YES;
+        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+
+        [self setupPhysicsWorld];
         
         [self initTileMap];
+
+        [self drawCollisionTiles];
+        player = [Player spriteWithFile:@"Lat Capt Human-Standing0001.png"];
+        player.scale = 0.5;
+        player.position = ccp(100, 400);
+        [player createBox2dObject:world];
+        [self addChild:player];
+
+
+        
         [self scheduleUpdate];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"CCC_human.plist"];
-        _actors = [CCSpriteBatchNode batchNodeWithFile:@"C.png"];
-        [_actors.texture setAliasTexParameters];
-        [self addChild:_actors z:-5];
+       // [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"CCC_human.plist"];
+      //  _actors = [CCSpriteBatchNode batchNodeWithFile:@"C.png"];
+     //   [_actors.texture setAliasTexParameters];
+     //   [self addChild:_actors z:-5];
 //        [self initHuman];
     }
     return self;
@@ -33,6 +178,28 @@
 
 //    [self updatePositions];
 //    [self setViewpointCenter:_human.position];
+    int32 velocityIterations = 8;
+	int32 positionIterations = 1;
+	
+	// Instruct the world to perform a single step of simulation. It is
+	// generally best to keep the time step and iterations fixed.
+	world->Step(dt, velocityIterations, positionIterations);
+	
+	
+	//Iterate over the bodies in the physics world
+	for (b2Body* b = world->GetBodyList(); b; b = b->GetNext()) {
+		if (b->GetUserData() != NULL) {
+			//Synchronize the AtlasSprites position and rotation with the corresponding body
+			CCSprite *myActor = (CCSprite*)b->GetUserData();
+			myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO,
+										   b->GetPosition().y * PTM_RATIO);
+			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
+		}
+	}
+	
+	b2Vec2 pos = [player body]->GetPosition();
+	CGPoint newPos = ccp(-1 * pos.x * PTM_RATIO + 50, self.position.y * PTM_RATIO);
+	[self setPosition:newPos];
 }
 
 
@@ -251,19 +418,6 @@
 //    [_collisions addObject:collision];
 //}
 
--(void)initTileMap {
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"practice_map.tmx"];
-    for (CCTMXLayer *child in [_tileMap children]) {
-        [[child texture] setAliasTexParameters];
-    }
-    _obstacles = [_tileMap layerNamed:@"boundaries"];
-//    CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"collisions"];
-//    _collisionArray = [objects objects];
-//    
-    _tileMap.scale = .5;
-    
-    [self addChild:_tileMap z:-6];
-}
 
 
 //-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

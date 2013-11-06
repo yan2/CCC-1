@@ -10,10 +10,12 @@
 #import "TRBox2D.h"
 #import "MazeLayer.h"
 #import "HudLayer.h"
+#import "ContactListener.h"
 
 @interface GameScene : CCLayer {
     b2World *world;
     GLESDebugDraw *debugDraw;
+    
 
 }
 
