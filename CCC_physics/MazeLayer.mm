@@ -217,13 +217,17 @@
 
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+
+    
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
     firstTouch = location;
-    if (location.x <= 2000 / 2 && location.y >= 150) {
+    if (location.x <=screenSize.width && location.y >= 150) {
         [player walk];
     }
-    if (location.x <= 2000 / 2 && location.y < 150) {
+    if (location.x <= screenSize.width && location.y < 150) {
         //player.position = ccp(player.position.x, player.position.y-50);
         [player crawl];
         ;

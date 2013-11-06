@@ -71,7 +71,7 @@
                                                           selector:@selector(onBack:)];
     goBack.scale = .5;
     CCMenu *back = [CCMenu menuWithItems: goBack, nil];
-    
+    back.zOrder = 10;
     if (self.iPad) {
         back.position = ccp(64, 64);
         
