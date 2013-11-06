@@ -40,10 +40,11 @@
     }
     else {
         // Create a menu image button for iPhone / iPod Touch
-        CCMenuItemImage *goBack = [CCMenuItemImage itemFromNormalImage:@"Arrow-Normal-iPhone.png" 
-                                                         selectedImage:@"Arrow-Selected-iPhone.png"
+        CCMenuItemImage *goBack = [CCMenuItemImage itemFromNormalImage:@"Back Arrow.png"
+                                                         selectedImage:@"Back Arrow.png"
                                                                 target:self 
                                                               selector:@selector(onBack:)];
+        goBack.scale = .5;
         // Add menu image to menu
         CCMenu *back = [CCMenu menuWithItems: goBack, nil];
 
