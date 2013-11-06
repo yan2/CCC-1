@@ -351,8 +351,8 @@
 
 
 -(void)dealloc {
+    [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
     [self unscheduleUpdate];
-    
 }
 
 @end
