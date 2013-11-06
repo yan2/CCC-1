@@ -19,6 +19,7 @@
 
 - (void)onLearningModules: (id) sender {
     //    [SceneManager goLearningModulesMenu];
+    [SceneManager goLearningModulesMenu];
 }
 
 - (void)addBackButton {
