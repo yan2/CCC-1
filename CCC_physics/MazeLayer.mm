@@ -39,7 +39,8 @@
 			   friction:(long)f
 				density:(long)dens
 			restitution:(long)rest
-				  boxId:(int)boxId {
+				  boxId:(int)boxId
+               uniqueID:(int)uniqueID                  {
     
 	// Define the dynamic body.
 	//Set up a 1m squared box in the physics world
@@ -51,9 +52,17 @@
     
 	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
     
-    GameObject *platform = [[GameObject alloc] init];
-    [platform setType:kGameObjectPlatform];
-	bodyDef.userData = platform;
+    if (uniqueID == 1) {
+        GameObject *platform = [[GameObject alloc] init];
+        [platform setType:kGameObjectPlatform];
+        bodyDef.userData = platform;
+    }
+    if (uniqueID == 2) {
+        GameObject *gameOverTile= [[GameObject alloc] init];
+        [gameOverTile setType:kGameObjectGameOverTile];
+        bodyDef.userData = gameOverTile;
+        NSLog(@"done creating game over tile");
+    }
     
 	b2Body *body = world->CreateBody(&bodyDef);
     
@@ -94,9 +103,38 @@
 					friction:1.5f
 					 density:0.0f
 				 restitution:0
-					   boxId:-1];
+					   boxId:-1
+                    uniqueID:1];
 	}
 }
+
+- (void) drawGameOverTiles {
+	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"gameOverLayer"];
+	NSMutableDictionary * objPoint;
+    
+	int x, y, w, h;
+	for (objPoint in [objects objects]) {
+        NSLog(@"game over objects detected");
+		x = [[objPoint valueForKey:@"x"] intValue];
+		y = [[objPoint valueForKey:@"y"] intValue];
+		w = [[objPoint valueForKey:@"width"] intValue]/2;
+		h = [[objPoint valueForKey:@"height"] intValue]/2;
+        
+		CGPoint _point=ccp(x+w/2,y+h);
+		CGPoint _size=ccp(w,h);
+        
+		[self makeBox2dObjAt:_point
+					withSize:_size
+					 dynamic:false
+					rotation:0
+					friction:1.5f
+					 density:0.0f
+				 restitution:0
+					   boxId:-1
+                    uniqueID:2];
+	}
+}
+
 
 -(void) setupPhysicsWorld {
     
@@ -187,11 +225,10 @@
         [humanSpriteSheet.texture setAliasTexParameters];
         [self addChild:humanSpriteSheet];
         [self drawCollisionTiles];
-        
         [self initCaptain];
         [self initMenu];
-
-
+        // just added this in here brah
+        [self drawGameOverTiles];
         
         [self scheduleUpdate];
 

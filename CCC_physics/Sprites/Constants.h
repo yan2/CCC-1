@@ -15,5 +15,6 @@
 typedef enum {
     kGameObjectNone,
     kGameObjectPlayer,
-    kGameObjectPlatform
+    kGameObjectPlatform,
+    kGameObjectGameOverTile
 } GameObjectType;
