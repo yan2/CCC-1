@@ -20,6 +20,7 @@
 #import "GameScene.h"
 #import "GameOverScene.h"
 #import "GameOverLayer.h"
+#import "LevelCompleteScene.h"
 
 @interface SceneManager : NSObject {
     
@@ -39,5 +40,6 @@
 +(void) goChapterSelect;
 +(void) goLevelSelect;
 +(void) goGameScene;
++(void) goLevelComplete;
 
 @end

@@ -16,6 +16,7 @@
     b2World* world;
     CCTMXLayer *_obstacles;
     NSMutableDictionary    *_objects;
+    NSMutableDictionary *_endTilesDictionary;
     NSMutableArray *_collisionArray;
     CCSpriteBatchNode *humanSpriteSheet;
 

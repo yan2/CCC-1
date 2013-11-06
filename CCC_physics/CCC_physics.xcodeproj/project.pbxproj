@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		31234201182A3F21001BC4B7 /* GameOverScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234200182A3F21001BC4B7 /* GameOverScene.mm */; };
-		31234203182A9209001BC4B7 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 31234202182A9209001BC4B7 /* replay.png */; };
 		31234209182A95B4001BC4B7 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234208182A95B4001BC4B7 /* GameOverLayer.mm */; };
 		3E452D3B1824063300B4EFDE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3A1824063300B4EFDE /* QuartzCore.framework */; };
 		3E452D3D1824063300B4EFDE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3C1824063300B4EFDE /* OpenGLES.framework */; };
@@ -388,6 +387,8 @@
 		3E45311818243D4400B4EFDE /* CCC_human.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E45303118243D4400B4EFDE /* CCC_human.plist */; };
 		3E97293B1828379A00F988F1 /* practice_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3E97293A1828379A00F988F1 /* practice_map.tmx */; };
 		3E97293D182837AC00F988F1 /* Boundaries.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E97293C182837AC00F988F1 /* Boundaries.png */; };
+		3EBD9144182AA47C00ABC143 /* LevelCompleteScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD9143182AA47C00ABC143 /* LevelCompleteScene.mm */; };
+		3EBD9148182AAEAD00ABC143 /* test_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9147182AAEAD00ABC143 /* test_map.tmx */; };
 		3EC0B998182550CF004CC08D /* SceneManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B98A182550CF004CC08D /* SceneManager.mm */; };
 		3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */; };
 		3EC0B9C318255119004CC08D /* Arrow-Normal-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */; };
@@ -547,15 +548,13 @@
 		5B2743C8182A1C3600942895 /* Ant Capt Trainsition-KL008.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B274371182A1C3500942895 /* Ant Capt Trainsition-KL008.png */; };
 		5B2743C9182A1C3600942895 /* Ant Capt Trainsition-KL009.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B274372182A1C3500942895 /* Ant Capt Trainsition-KL009.png */; };
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
-		5BCB88841829E6A4009D6DBF /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.m */; };
+		5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.mm */; };
 		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
-		5BCB88891829EA70009D6DBF /* test_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB88881829EA70009D6DBF /* test_map.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		312341FF182A3F21001BC4B7 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		31234200182A3F21001BC4B7 /* GameOverScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameOverScene.mm; sourceTree = "<group>"; };
-		31234202182A9209001BC4B7 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = replay.png; path = "../../../SuperKoalio 2/SuperKoalio/replay.png"; sourceTree = "<group>"; };
 		31234207182A95B4001BC4B7 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Sprites/GameOverLayer.h; sourceTree = "<group>"; };
 		31234208182A95B4001BC4B7 /* GameOverLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameOverLayer.mm; path = ../Sprites/GameOverLayer.mm; sourceTree = "<group>"; };
 		3E452D371824063300B4EFDE /* CCC_physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC_physics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1098,6 +1097,9 @@
 		3E45303118243D4400B4EFDE /* CCC_human.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CCC_human.plist; path = ../CCC_human.plist; sourceTree = "<group>"; };
 		3E97293A1828379A00F988F1 /* practice_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = practice_map.tmx; sourceTree = "<group>"; };
 		3E97293C182837AC00F988F1 /* Boundaries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boundaries.png; sourceTree = "<group>"; };
+		3EBD9142182AA47C00ABC143 /* LevelCompleteScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCompleteScene.h; sourceTree = "<group>"; };
+		3EBD9143182AA47C00ABC143 /* LevelCompleteScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelCompleteScene.mm; sourceTree = "<group>"; };
+		3EBD9147182AAEAD00ABC143 /* test_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_map.tmx; sourceTree = "<group>"; };
 		3EC0B97118254E8A004CC08D /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
 		3EC0B98A182550CF004CC08D /* SceneManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneManager.mm; path = ../SceneManager.mm; sourceTree = "<group>"; };
 		3EC0B994182550CF004CC08D /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../SceneManager.h; sourceTree = "<group>"; };
@@ -1286,10 +1288,9 @@
 		5BCB887F1829E6A4009D6DBF /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
 		5BCB88801829E6A4009D6DBF /* ContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactListener.mm; sourceTree = "<group>"; };
 		5BCB88811829E6A4009D6DBF /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
-		5BCB88821829E6A4009D6DBF /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		5BCB88821829E6A4009D6DBF /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
 		5BCB88851829E702009D6DBF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		5BCB88861829E702009D6DBF /* Player.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Player.mm; sourceTree = "<group>"; };
-		5BCB88881829EA70009D6DBF /* test_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_map.tmx; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2227,7 +2228,6 @@
 		3ECB2E4718257CB800C82177 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				31234202182A9209001BC4B7 /* replay.png */,
 				3ECB2E4818257CB800C82177 /* 0Star-Normal-iPad-hd.png */,
 				3ECB2E4918257CB800C82177 /* 0Star-Normal-iPad.png */,
 				3ECB2E4A18257CB800C82177 /* 0Star-Normal-iPhone-hd.png */,
@@ -2271,6 +2271,8 @@
 		3ECB2EC618258BF800C82177 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3EBD9142182AA47C00ABC143 /* LevelCompleteScene.h */,
+				3EBD9143182AA47C00ABC143 /* LevelCompleteScene.mm */,
 				3ECB2E1518257B6B00C82177 /* GameScene.h */,
 				3ECB2E1618257B6B00C82177 /* GameScene.mm */,
 				3ECB2E1718257B6B00C82177 /* LevelSelect.h */,
@@ -2417,7 +2419,7 @@
 			isa = PBXGroup;
 			children = (
 				5B274316182A1A6100942895 /* clear_map.tmx */,
-				5BCB88881829EA70009D6DBF /* test_map.tmx */,
+				3EBD9147182AAEAD00ABC143 /* test_map.tmx */,
 				3ECB2EB718258BAC00C82177 /* Back.png */,
 				3E97293C182837AC00F988F1 /* Boundaries.png */,
 				3E97293A1828379A00F988F1 /* practice_map.tmx */,
@@ -2463,7 +2465,7 @@
 				5BCB887F1829E6A4009D6DBF /* ContactListener.h */,
 				5BCB88801829E6A4009D6DBF /* ContactListener.mm */,
 				5BCB88811829E6A4009D6DBF /* GameObject.h */,
-				5BCB88821829E6A4009D6DBF /* GameObject.m */,
+				5BCB88821829E6A4009D6DBF /* GameObject.mm */,
 				5B274313182A154900942895 /* Captain.h */,
 				5B274314182A154A00942895 /* Captain.mm */,
 			);
@@ -2562,7 +2564,6 @@
 				3E4530E318243D4400B4EFDE /* Lat Capt Human-Stand Up0026.png in Resources */,
 				3E45304D18243D4400B4EFDE /* Lat Capt Human-Crawling0015.png in Resources */,
 				3ECB2E8D18257CB800C82177 /* 2Star-Normal-iPad.png in Resources */,
-				31234203182A9209001BC4B7 /* replay.png in Resources */,
 				5B2743C5182A1C3600942895 /* Ant Capt Trainsition-KL005.png in Resources */,
 				3E45304118243D4400B4EFDE /* Lat Capt Human-Crawling0003.png in Resources */,
 				3E45306F18243D4400B4EFDE /* Lat Capt Human-Running0015.png in Resources */,
@@ -2646,6 +2647,7 @@
 				3E45307918243D4400B4EFDE /* Lat Capt Human-Standing.xml in Resources */,
 				3E45310718243D4400B4EFDE /* Lat Capt Human-Walking0002.png in Resources */,
 				3E45310418243D4400B4EFDE /* Lat Capt Human-Wait to Crawl.xml in Resources */,
+				3EBD9148182AAEAD00ABC143 /* test_map.tmx in Resources */,
 				3E4530A918243D4400B4EFDE /* Lat Capt Human-Standing0048.png in Resources */,
 				5B2743A5182A1C3600942895 /* Ant Capt Transistion-From KL0025.png in Resources */,
 				5B2743AF182A1C3600942895 /* Ant Capt Trainsition-KL0011.png in Resources */,
@@ -2772,7 +2774,6 @@
 				3E45308618243D4400B4EFDE /* Lat Capt Human-Standing0013.png in Resources */,
 				3E4530AA18243D4400B4EFDE /* Lat Capt Human-Standing0049.png in Resources */,
 				3E4530EE18243D4400B4EFDE /* Lat Capt Human-To Crawl Transition0008.png in Resources */,
-				5BCB88891829EA70009D6DBF /* test_map.tmx in Resources */,
 				5B2743B0182A1C3600942895 /* Ant Capt Trainsition-KL0012.png in Resources */,
 				3E45308C18243D4400B4EFDE /* Lat Capt Human-Standing0019.png in Resources */,
 				5B2743C6182A1C3600942895 /* Ant Capt Trainsition-KL006.png in Resources */,
@@ -2968,6 +2969,7 @@
 				3E452D8B1824063400B4EFDE /* CCAnimation.m in Sources */,
 				3E452EEB1824063700B4EFDE /* b2EdgeAndPolygonContact.cpp in Sources */,
 				3E452DDB1824063500B4EFDE /* CCPhysicsSprite.mm in Sources */,
+				3EBD9144182AA47C00ABC143 /* LevelCompleteScene.mm in Sources */,
 				3E452E991824063600B4EFDE /* b2Distance.cpp in Sources */,
 				3ECB2DEB18256BE500C82177 /* Chapters.m in Sources */,
 				3E452EE81824063700B4EFDE /* b2EdgeAndCircleContact.cpp in Sources */,
@@ -3063,7 +3065,7 @@
 				3E452EEE1824063700B4EFDE /* b2PolygonAndCircleContact.cpp in Sources */,
 				3E452EE21824063700B4EFDE /* b2Contact.cpp in Sources */,
 				3E452EA31824063700B4EFDE /* b2ChainShape.cpp in Sources */,
-				5BCB88841829E6A4009D6DBF /* GameObject.m in Sources */,
+				5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */,
 				3E452F071824063700B4EFDE /* b2PulleyJoint.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

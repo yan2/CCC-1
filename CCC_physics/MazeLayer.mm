@@ -57,6 +57,12 @@
         bodyDef.userData = gameOverTile;
         NSLog(@"done creating game over tile");
     }
+    if (uniqueID == 3) {
+        GameObject *endTile= [[GameObject alloc] init];
+        [endTile setType:kGameObjectEndTile];
+        bodyDef.userData = endTile;
+        NSLog(@"done creating game over tile");
+    }
     
 	b2Body *body = world->CreateBody(&bodyDef);
     
@@ -126,6 +132,32 @@
 				 restitution:0
 					   boxId:-1
                     uniqueID:2];
+	}
+}
+- (void) drawEndTiles {
+	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"end"];
+	NSMutableDictionary * objPoint;
+    
+	int x, y, w, h;
+	for (objPoint in [objects objects]) {
+        NSLog(@"end objects detected");
+		x = [[objPoint valueForKey:@"x"] intValue];
+		y = [[objPoint valueForKey:@"y"] intValue];
+		w = [[objPoint valueForKey:@"width"] intValue]/2;
+		h = [[objPoint valueForKey:@"height"] intValue]/2;
+        
+		CGPoint _point=ccp(x+w/2,y+h);
+		CGPoint _size=ccp(w,h);
+        
+		[self makeBox2dObjAt:_point
+					withSize:_size
+					 dynamic:false
+					rotation:0
+					friction:1.5f
+					 density:0.0f
+				 restitution:0
+					   boxId:-1
+                    uniqueID:3];
 	}
 }
 
@@ -203,27 +235,6 @@
     }
 }
 
--(void)gameOver {
-    NSString *gameText;
-    
-    gameText = @"You have Died!";
-    
-    CCLabelTTF *diedLabel = [[CCLabelTTF alloc] initWithString:gameText fontName:@"Marker Felt" fontSize:40];
-    diedLabel.position = ccp(240, 200);
-    CCMoveBy *slideIn = [[CCMoveBy alloc] initWithDuration:1.0 position:ccp(0, 250)];
-    CCMenuItemImage *replay = [[CCMenuItemImage alloc] initWithNormalImage:@"replay.png" selectedImage:@"replay.png" disabledImage:@"replay.png" block:^(id sender) {
-        [[CCDirector sharedDirector] replaceScene:[GameScene scene]];
-    }];
-    
-    NSArray *menuItems = [NSArray arrayWithObject:replay];
-    CCMenu *menu = [[CCMenu alloc] initWithArray:menuItems];
-    menu.position = ccp(240, -100);
-    
-    [self addChild:menu];
-    [self addChild:diedLabel];
-    
-    [menu runAction:slideIn];
-}
 
 
 -(id)init {
@@ -244,7 +255,7 @@
 //        [self initMenu];
         // just added this in here brah
         [self drawGameOverTiles];
-        
+        [self drawEndTiles];
         [self scheduleUpdate];
 
     }

@@ -15,6 +15,9 @@
 
 
 
++(void) goLevelComplete {
+    [SceneManager go:[LevelCompleteScene node]];
+}
 +(void) goMainMenu {
     [SceneManager go:[MainMenu node]];
 }
