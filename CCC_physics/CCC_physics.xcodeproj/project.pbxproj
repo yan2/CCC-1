@@ -562,6 +562,9 @@
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
 		5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.mm */; };
 		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
+		5BF2F823182ADFDA00413FFD /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2F820182ADFDA00413FFD /* explore.png */; };
+		5BF2F824182ADFDA00413FFD /* learn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2F821182ADFDA00413FFD /* learn.png */; };
+		5BF2F825182ADFDA00413FFD /* mainBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2F822182ADFDA00413FFD /* mainBackground.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1314,6 +1317,9 @@
 		5BCB88821829E6A4009D6DBF /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
 		5BCB88851829E702009D6DBF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		5BCB88861829E702009D6DBF /* Player.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Player.mm; sourceTree = "<group>"; };
+		5BF2F820182ADFDA00413FFD /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
+		5BF2F821182ADFDA00413FFD /* learn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learn.png; sourceTree = "<group>"; };
+		5BF2F822182ADFDA00413FFD /* mainBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainBackground.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1396,6 +1402,7 @@
 		3E452D4B1824063300B4EFDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2F81F182ADFB900413FFD /* UI */,
 				3EBD914B182ABD9500ABC143 /* Buttons */,
 				5B274318182A1C3500942895 /* KangarooTransform */,
 				5BCB88711829E412009D6DBF /* Map */,
@@ -2514,6 +2521,16 @@
 			path = Sprites;
 			sourceTree = SOURCE_ROOT;
 		};
+		5BF2F81F182ADFB900413FFD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2F820182ADFDA00413FFD /* explore.png */,
+				5BF2F821182ADFDA00413FFD /* learn.png */,
+				5BF2F822182ADFDA00413FFD /* mainBackground.jpg */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2622,6 +2639,7 @@
 				3ECB2EC518258BAC00C82177 /* Back.png in Resources */,
 				5B274390182A1C3600942895 /* Lat Capt KL-Jumping008.png in Resources */,
 				3E45308418243D4400B4EFDE /* Lat Capt Human-Standing0011.png in Resources */,
+				5BF2F825182ADFDA00413FFD /* mainBackground.jpg in Resources */,
 				3E45311118243D4400B4EFDE /* Lat Capt Human-Walking0012.png in Resources */,
 				3E45306518243D4400B4EFDE /* Lat Capt Human-Running0005.png in Resources */,
 				3E452D5D1824063400B4EFDE /* Icon.png in Resources */,
@@ -2740,6 +2758,7 @@
 				3ECB2E9718257CB800C82177 /* Locked-iPhone.png in Resources */,
 				3E45308118243D4400B4EFDE /* Lat Capt Human-Standing0008.png in Resources */,
 				5B27439B182A1C3600942895 /* Ant Capt Transistion-From KL0016.png in Resources */,
+				5BF2F824182ADFDA00413FFD /* learn.png in Resources */,
 				3E4530D718243D4400B4EFDE /* Lat Capt Human-Stand Up0014.png in Resources */,
 				3E4530C818243D4400B4EFDE /* Lat Capt Human-Standing0079.png in Resources */,
 				3EC0B9CC18255119004CC08D /* StickyNote-iPhone-hd.png in Resources */,
@@ -2897,6 +2916,7 @@
 				3EC0B9CB18255119004CC08D /* StickyNote-iPad.png in Resources */,
 				3EBD9160182ABD9500ABC143 /* Ram Icon.png in Resources */,
 				3EBD915D182ABD9500ABC143 /* Icon Drawer.png in Resources */,
+				5BF2F823182ADFDA00413FFD /* explore.png in Resources */,
 				5B2743A2182A1C3600942895 /* Ant Capt Transistion-From KL0022.png in Resources */,
 				3E452D531824063400B4EFDE /* fps_images.png in Resources */,
 				3E4530C718243D4400B4EFDE /* Lat Capt Human-Standing0078.png in Resources */,
