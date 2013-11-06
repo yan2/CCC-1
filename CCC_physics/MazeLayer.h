@@ -6,6 +6,8 @@
 
 #import "ContactListener.h"
 #import "HudLayer.h"
+#import "SimpleAudioEngine.h"
+#import "CocosDenshion.h"
 
 
 @interface MazeLayer : CCLayer <DirectionPadDelegate> {

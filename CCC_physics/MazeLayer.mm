@@ -1,6 +1,7 @@
 
 
 #import "MazeLayer.h"
+#import "SimpleAudioEngine.h"
 
 @interface MazeLayer(Private)
 -(void) setupPhysicsWorld;
@@ -269,7 +270,7 @@
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 
         [self setupPhysicsWorld];
-        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"sbm.mp3"];
         [self initTileMap];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"CCC_first.plist"];
         
@@ -351,6 +352,7 @@
 
 -(void)dealloc {
     [self unscheduleUpdate];
+    
 }
 
 @end
