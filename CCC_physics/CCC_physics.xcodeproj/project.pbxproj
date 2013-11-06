@@ -389,6 +389,7 @@
 		3E97293D182837AC00F988F1 /* Boundaries.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E97293C182837AC00F988F1 /* Boundaries.png */; };
 		3EBD9144182AA47C00ABC143 /* LevelCompleteScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD9143182AA47C00ABC143 /* LevelCompleteScene.mm */; };
 		3EBD9148182AAEAD00ABC143 /* test_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9147182AAEAD00ABC143 /* test_map.tmx */; };
+		3EBD914A182ABC7600ABC143 /* Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9149182ABC7600ABC143 /* Sky.png */; };
 		3EC0B998182550CF004CC08D /* SceneManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B98A182550CF004CC08D /* SceneManager.mm */; };
 		3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */; };
 		3EC0B9C318255119004CC08D /* Arrow-Normal-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */; };
@@ -1100,6 +1101,7 @@
 		3EBD9142182AA47C00ABC143 /* LevelCompleteScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCompleteScene.h; sourceTree = "<group>"; };
 		3EBD9143182AA47C00ABC143 /* LevelCompleteScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelCompleteScene.mm; sourceTree = "<group>"; };
 		3EBD9147182AAEAD00ABC143 /* test_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_map.tmx; sourceTree = "<group>"; };
+		3EBD9149182ABC7600ABC143 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
 		3EC0B97118254E8A004CC08D /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
 		3EC0B98A182550CF004CC08D /* SceneManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneManager.mm; path = ../SceneManager.mm; sourceTree = "<group>"; };
 		3EC0B994182550CF004CC08D /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../SceneManager.h; sourceTree = "<group>"; };
@@ -1814,6 +1816,7 @@
 		3E452F4F18243D4300B4EFDE /* Captain Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EBD9149182ABC7600ABC143 /* Sky.png */,
 				3E45303118243D4400B4EFDE /* CCC_human.plist */,
 				3E452F5018243D4300B4EFDE /* Crawling */,
 				3E452F6618243D4300B4EFDE /* Human Actions Spec Sheet.docx */,
@@ -2651,6 +2654,7 @@
 				3E4530A918243D4400B4EFDE /* Lat Capt Human-Standing0048.png in Resources */,
 				5B2743A5182A1C3600942895 /* Ant Capt Transistion-From KL0025.png in Resources */,
 				5B2743AF182A1C3600942895 /* Ant Capt Trainsition-KL0011.png in Resources */,
+				3EBD914A182ABC7600ABC143 /* Sky.png in Resources */,
 				3E45305F18243D4400B4EFDE /* Lat Capt Human-Leaping0009.png in Resources */,
 				5B2548EA182A42B50015204D /* KangarooIcon.png in Resources */,
 				3E45309718243D4400B4EFDE /* Lat Capt Human-Standing0030.png in Resources */,

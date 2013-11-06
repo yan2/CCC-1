@@ -123,6 +123,15 @@
         [self setupPhysicsWorld];
 //        [self limitWorldToScreen];
         
+    
+        
+        CCSprite *background = [CCSprite spriteWithFile:@"Sky.png"];
+        background.position = ccp(screenSize.width/2, screenSize.height/2);
+        background.zOrder = -100;
+        [self addChild:background];
+        
+        
+        
         // schedule Box2D updates
 //        [self schedule: @selector(tick:)];
 

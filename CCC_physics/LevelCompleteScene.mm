@@ -40,6 +40,7 @@
                                                          selectedImage:@"Home icon.png"
                                                                 target:self
                                                               selector:@selector(onHome:)];
+        goHome.scale = .6;
         // Add menu image to menu
         CCMenu *home = [CCMenu menuWithItems: goHome, nil];
         // Determine Screen Size

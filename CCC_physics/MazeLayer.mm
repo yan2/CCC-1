@@ -141,8 +141,8 @@
 	int x, y, w, h;
 	for (objPoint in [objects objects]) {
         NSLog(@"end objects detected");
-		x = [[objPoint valueForKey:@"x"] intValue];
-		y = [[objPoint valueForKey:@"y"] intValue];
+		x = [[objPoint valueForKey:@"x"] intValue]/2;
+		y = [[objPoint valueForKey:@"y"] intValue]/2;
 		w = [[objPoint valueForKey:@"width"] intValue]/2;
 		h = [[objPoint valueForKey:@"height"] intValue]/2;
         
