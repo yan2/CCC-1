@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+//#import "Constants.h"
+#import "Defines.h"
+#import "SceneManager.h"
 
 @interface LearningModulesMenu : CCLayer {
     
 }
-
+@property (nonatomic, assign) BOOL iPad;
 @end

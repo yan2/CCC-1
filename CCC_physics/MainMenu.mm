@@ -76,39 +76,30 @@
         
         // Create font based items ready for CCMenu
         
-        //        CCSprite *explore = [CCSprite spriteWithFile:@"explore.png"];
-        //        CCMenuItemImage *ex = [CCMenuItemImage itemFromNormalSprite:explore selectedSprite:explore target:self selector:@selector(onPlay:)];
-        //        ex.scale = .5;
-        //        CCMenu *menu = [CCMenu menuWithItems:ex, nil];
-        //        [self addChild:menu];
+
         CCMenuItemImage *learn = [CCMenuItemImage itemFromNormalImage:@"learn.png"
                                                         selectedImage:@"learn.png"
                                                                target:self
                                                              selector:@selector(onLearningModules:)];
         learn.scale = .5;
-        //        learn.position = ccp(screenSize.width/2, screenSize.height/2);
-        
         learn.zOrder = -50;
+        
         CCMenu *learnMenu = [CCMenu menuWithItems: learn, nil];
         [self addChild:learnMenu];
+        learnMenu.position = ccp(0,0);
         
         CCMenuItemImage *explore = [CCMenuItemImage itemFromNormalImage:@"explore.png"
                                                           selectedImage:@"explore.png"
                                                                  target:self
                                                                selector:@selector(onPlay:)];
-        //        explore.position = ccp(screenSize.width/2, screenSize.height/2);
+        
         
         explore.zOrder = -50;
         CCMenu *exploreMenu = [CCMenu menuWithItems: explore, nil];
         [self addChild:exploreMenu];
-        
         explore.scale = .5;
-        //        CCSprite *learn = [CCSprite spriteWithFile:@"learn.png"];
-        //        CCMenuItemImage *LM = [CCMenuItemImage itemFromNormalSprite:learn selectedSprite:learn target:self selector:@selector(onLearningModules:)];
-        //        LM.scale = .5;
-        //        CCMenu *LMMenu = [CCMenu menuWithItems:LM, nil];
-        //        [self addChild:LMMenu];
-        
+        exploreMenu.position = ccp(screenSize.width,screenSize.height/2);
+
         
         CCSprite *background = [CCSprite spriteWithFile:@"mainBackground.jpg"];
         background.position = ccp(screenSize.width/2, screenSize.height/2);

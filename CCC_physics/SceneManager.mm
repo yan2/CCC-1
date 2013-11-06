@@ -42,6 +42,10 @@
     [SceneManager go:[GameOverLayer node]];
 }
 
++(void) goLearningModulesMenu {
+    [SceneManager go:[LearningModulesMenu node]];
+}
+
 +(void) go: (CCLayer *) layer {
     CCDirector *director = [CCDirector sharedDirector];
     CCScene *newScene = [SceneManager wrap:layer];

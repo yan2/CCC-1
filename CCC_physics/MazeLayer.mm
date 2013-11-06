@@ -174,7 +174,7 @@
 
 -(void)initTileMap {
    
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"clear_map.tmx"];
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"test_map.tmx"];
     _tileMap.scale = .5;
 	_tileMap.anchorPoint = ccp(0, 0);
 	[self addChild:_tileMap];
