@@ -6,14 +6,14 @@
 //
 //
 
-#import "CCLayer.h"
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+//#import "Constants.h"
 #import "Defines.h"
 #import "SceneManager.h"
-#import "GameScene.h"
-#import "MazeLayer.h"
+#import "Constants.h"
 
 @interface GameOverLayer : CCLayer
+@property (nonatomic, assign) BOOL iPad;
 
 @end

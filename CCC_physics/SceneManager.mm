@@ -38,8 +38,8 @@
     [SceneManager go:[GameScene node]];
 }
 
-+(void) goGameOverScene {
-    [SceneManager go:[GameOverScene node]];
++(void) goGameOverLayer {
+    [SceneManager go:[GameOverLayer node]];
 }
 
 +(void) go: (CCLayer *) layer {

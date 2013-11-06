@@ -30,6 +30,7 @@ void ContactListener::BeginContact(b2Contact *contact) {
     }
     if (IS_GAMEOVERTILE(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"~!~!~!~ Player made contact with death tiles brah");
+        [SceneManager goGameOverLayer];
     } if (IS_ENDTILE(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"PLAYER REACHED END");
         [SceneManager goLevelComplete];
@@ -48,7 +49,7 @@ void ContactListener::EndContact(b2Contact *contact) {
         CCLOG(@"~!~!~!~ Player lost contact with death tiles brah");
     }if (IS_ENDTILE(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"PLAYER REACHED ENdD");
-        [SceneManager goLevelComplete];
+//        [SceneManager goLevelComplete];
         
     }
 }

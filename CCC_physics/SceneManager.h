@@ -18,7 +18,7 @@
 #import "ChapterSelect.h"
 #import "LevelSelect.h"
 #import "GameScene.h"
-#import "GameOverScene.h"
+//#import "GameOverScene.h"
 #import "GameOverLayer.h"
 #import "LevelCompleteScene.h"
 
@@ -41,5 +41,5 @@
 +(void) goLevelSelect;
 +(void) goGameScene;
 +(void) goLevelComplete;
-
++(void) goGameOverLayer;
 @end
