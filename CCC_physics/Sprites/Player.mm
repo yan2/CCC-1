@@ -1,10 +1,3 @@
-//
-//  Player.m
-//  SimpleBox2dScroller
-//
-//  Created by min on 3/17/11.
-//  Copyright 2011 Min Kwon. All rights reserved.
-//
 
 #import "Player.h"
 #import "Constants.h"
@@ -44,7 +37,7 @@
 -(void) moveRight {
     b2Vec2 impulse = b2Vec2(1.0f, 0.0f);
     body->ApplyLinearImpulse(impulse, body->GetWorldCenter());
-    body->SetLinearVelocity(b2Vec2(5.0, 0));
+    body->SetLinearVelocity(b2Vec2(6.5, 0));
 
 }
 

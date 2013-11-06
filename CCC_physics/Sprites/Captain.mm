@@ -1,10 +1,4 @@
-//
-//  Captain.m
-//  CCC_physics
-//
-//  Created by Xu Rui on 6/11/13.
-//
-//
+
 
 #import "Captain.h"
 

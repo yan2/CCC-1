@@ -82,6 +82,23 @@
     [self addChild:back];        
 }
 
+-(void) initMenu {
+    CCMenuItem *kangarooItem = [CCMenuItemImage
+                                itemFromNormalImage:@"KangarooIcon.png"
+                                selectedImage:@"KangarooIcon.png"
+                                target:self selector:@selector(kangarooButtonTapped:)];
+    CCMenu *menu= [CCMenu menuWithItems:kangarooItem, nil];
+    menu.position = ccp(420, 270);
+    [self addChild: menu z:100];
+}
+
+-(void)kangarooButtonTapped:(id) sender{
+    NSLog(@"kangaroo selected");
+    //Superpower *power = [Superpower init];
+    //    _human.superPowerAction = power.superpowerAction;
+    [_mazeLayer.getPlayer superPower];
+}
+
 - (id)init {
     
     if( (self=[super init])) {
@@ -101,7 +118,7 @@
   
         //  Put a 'back' button in the scene
         [self addBackButton];
-
+        [self initMenu];
         [self createScene];
         [self setupPhysicsWorld];
 //        [self limitWorldToScreen];

@@ -20,8 +20,8 @@
   </data>
  </layer>
  <objectgroup name="collisions" width="100" height="20">
-  <object x="64" y="512" width="736" height="64"/>
-  <object x="1024" y="512" width="821" height="50"/>
+  <object x="31" y="481" width="831" height="60"/>
+  <object x="1045" y="482" width="1861" height="66"/>
  </objectgroup>
  <objectgroup name="gameOverLayer" width="100" height="20">
   <object x="480" y="608" width="1152" height="32"/>

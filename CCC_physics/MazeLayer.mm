@@ -1,10 +1,4 @@
-//
-//  MazeLayer.m
-//  CaptainCC
-//
-//  Created by Ann Niou on 10/27/13.
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "MazeLayer.h"
 
@@ -163,7 +157,7 @@
     NSLog(@"init human");
     [humanSpriteSheet addChild:player];
 
-    player.scale = 0.5;
+    player.scale = 0.7;
     player.position = ccp(100, 400);
     [player createBox2dObject:world];
     //[self addChild:player];
@@ -172,23 +166,22 @@
 }
 
 
--(void) initMenu {
-    CCMenuItem *kangarooItem = [CCMenuItemImage
-                                itemFromNormalImage:@"KangarooIcon.png"
-                                selectedImage:@"KangarooIcon.png"
-                                target:self selector:@selector(kangarooButtonTapped:)];
-    CCMenu *menu= [CCMenu menuWithItems:kangarooItem, nil];
-    menu.position = ccp(500, 300);
-    [self addChild: menu z:100];
-
-}
-
--(void)kangarooButtonTapped:(id) sender{
-    NSLog(@"kangaroo selected");
-    //Superpower *power = [Superpower init];
-    //    _human.superPowerAction = power.superpowerAction;
-    [player superPower];
-}
+//-(void) initMenu {
+//    CCMenuItem *kangarooItem = [CCMenuItemImage
+//                                itemFromNormalImage:@"KangarooIcon.png"
+//                                selectedImage:@"KangarooIcon.png"
+//                                target:self selector:@selector(kangarooButtonTapped:)];
+//    CCMenu *menu= [CCMenu menuWithItems:kangarooItem, nil];
+//    menu.position = ccp(500, 300);
+//    [self addChild: menu z:100];
+//}
+//
+//-(void)kangarooButtonTapped:(id) sender{
+//    NSLog(@"kangaroo selected");
+//    //Superpower *power = [Superpower init];
+//    //    _human.superPowerAction = power.superpowerAction;
+//    [player superPower];
+//}
 
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -226,7 +219,7 @@
         [self addChild:humanSpriteSheet];
         [self drawCollisionTiles];
         [self initCaptain];
-        [self initMenu];
+//        [self initMenu];
         // just added this in here brah
         [self drawGameOverTiles];
         
@@ -269,6 +262,10 @@
 
 }
 
+
+- (Captain*) getPlayer{
+    return player;
+}
 
 
 -(void)setViewpointCenter:(CGPoint) position {
