@@ -401,6 +401,7 @@
 		3EBD915F182ABD9500ABC143 /* Owl Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9154182ABD9500ABC143 /* Owl Icon.png */; };
 		3EBD9160182ABD9500ABC143 /* Ram Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9155182ABD9500ABC143 /* Ram Icon.png */; };
 		3EBD9161182ABD9500ABC143 /* Spider Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD9156182ABD9500ABC143 /* Spider Icon.png */; };
+		3EBD916A182AE15400ABC143 /* LearningModulesMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD9169182AE15400ABC143 /* LearningModulesMenu.m */; };
 		3EC0B998182550CF004CC08D /* SceneManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B98A182550CF004CC08D /* SceneManager.mm */; };
 		3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */; };
 		3EC0B9C318255119004CC08D /* Arrow-Normal-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B99E18255118004CC08D /* Arrow-Normal-iPad.png */; };
@@ -1127,6 +1128,8 @@
 		3EBD9154182ABD9500ABC143 /* Owl Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Owl Icon.png"; sourceTree = "<group>"; };
 		3EBD9155182ABD9500ABC143 /* Ram Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ram Icon.png"; sourceTree = "<group>"; };
 		3EBD9156182ABD9500ABC143 /* Spider Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spider Icon.png"; sourceTree = "<group>"; };
+		3EBD9168182AE15400ABC143 /* LearningModulesMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningModulesMenu.h; sourceTree = "<group>"; };
+		3EBD9169182AE15400ABC143 /* LearningModulesMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningModulesMenu.m; sourceTree = "<group>"; };
 		3EC0B98A182550CF004CC08D /* SceneManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneManager.mm; path = ../SceneManager.mm; sourceTree = "<group>"; };
 		3EC0B994182550CF004CC08D /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../SceneManager.h; sourceTree = "<group>"; };
 		3EC0B99D18255118004CC08D /* Arrow-Normal-iPad-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-Normal-iPad-hd.png"; sourceTree = "<group>"; };
@@ -2332,6 +2335,8 @@
 				3ECB2DFC18256F2B00C82177 /* ChapterSelect.h */,
 				3ECB2DFD18256F2B00C82177 /* ChapterSelect.mm */,
 				3EC0B9DA182554B8004CC08D /* MainMenu.mm */,
+				3EBD9168182AE15400ABC143 /* LearningModulesMenu.h */,
+				3EBD9169182AE15400ABC143 /* LearningModulesMenu.m */,
 				3EC0B9DB182554B8004CC08D /* MainMenu.h */,
 				312341FF182A3F21001BC4B7 /* GameOverScene.h */,
 				31234200182A3F21001BC4B7 /* GameOverScene.mm */,
@@ -3026,6 +3031,7 @@
 				3E452E641824063600B4EFDE /* ZipUtils.m in Sources */,
 				3E452DCF1824063400B4EFDE /* CCParticleSystem.m in Sources */,
 				3E452EDF1824063700B4EFDE /* b2CircleContact.cpp in Sources */,
+				3EBD916A182AE15400ABC143 /* LearningModulesMenu.m in Sources */,
 				3E452E471824063600B4EFDE /* base64.c in Sources */,
 				3E452F291824063800B4EFDE /* GLES-Render.mm in Sources */,
 				3E452DCC1824063400B4EFDE /* CCParticleExamples.m in Sources */,
