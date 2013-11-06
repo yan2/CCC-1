@@ -1145,17 +1145,12 @@
 		3E452D4A1824063300B4EFDE /* CCC_physics */ = {
 			isa = PBXGroup;
 			children = (
-				3E97293C182837AC00F988F1 /* Boundaries.png */,
-				3E97293A1828379A00F988F1 /* practice_map.tmx */,
 				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
 				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
 				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
 				3ECB2ECC1825C9A400C82177 /* HudLayer.mm */,
 				3EC0B98A182550CF004CC08D /* SceneManager.mm */,
 				3EC0B994182550CF004CC08D /* SceneManager.h */,
-				3ECB2EC818258C1800C82177 /* Sprites */,
-				3ECB2EC618258BF800C82177 /* Scenes */,
-				3ECB2EB718258BAC00C82177 /* Back.png */,
 				3EC0B97118254E8A004CC08D /* Defines.h */,
 				3E452F1E1824063800B4EFDE /* AppDelegate.h */,
 				3E452F1F1824063800B4EFDE /* AppDelegate.mm */,
@@ -1164,6 +1159,8 @@
 				3E452F271824063800B4EFDE /* GLES-Render.h */,
 				3E452F281824063800B4EFDE /* GLES-Render.mm */,
 				3E452F2A1824063800B4EFDE /* GameConfig.h */,
+				3ECB2EC818258C1800C82177 /* Sprites */,
+				3ECB2EC618258BF800C82177 /* Scenes */,
 				3E452D4B1824063300B4EFDE /* Resources */,
 				3E452F1A1824063800B4EFDE /* Supporting Files */,
 			);
@@ -1173,29 +1170,12 @@
 		3E452D4B1824063300B4EFDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3ECB2EAA18258BAC00C82177 /* prac_map.tmx */,
-				3ECB2EAF18258BAC00C82177 /* Fore.png */,
-				3ECB2EB318258BAC00C82177 /* pd_dpad-hd.png */,
-				3ECB2EB418258BAC00C82177 /* pd_dpad.png */,
-				3ECB2EB518258BAC00C82177 /* sprites.plist */,
-				3ECB2EB618258BAC00C82177 /* Visible Boundary (Not include in final).png */,
+				5BCB88711829E412009D6DBF /* Map */,
 				3ECB2DD318256BE400C82177 /* Data */,
 				3E452D631824063400B4EFDE /* libs */,
 				3EC0B99C18255118004CC08D /* Images */,
 				3E452F4F18243D4300B4EFDE /* Captain Resources */,
-				3E452D4C1824063300B4EFDE /* Default.png */,
-				3E452D4E1824063400B4EFDE /* Default@2x.png */,
-				3E452D501824063400B4EFDE /* Default-568h@2x.png */,
-				3E452D521824063400B4EFDE /* fps_images.png */,
-				3E452D541824063400B4EFDE /* Icon-72.png */,
-				3E452D561824063400B4EFDE /* Icon-Small-50.png */,
-				3E452D581824063400B4EFDE /* Icon-Small.png */,
-				3E452D5A1824063400B4EFDE /* Icon-Small@2x.png */,
-				3E452D5C1824063400B4EFDE /* Icon.png */,
-				3E452D5E1824063400B4EFDE /* Icon@2x.png */,
-				3E452D601824063400B4EFDE /* Info.plist */,
-				3E452D611824063400B4EFDE /* iTunesArtwork */,
-				3E452F2B1824063800B4EFDE /* blocks.png */,
+				5BCB88721829E47F009D6DBF /* Cocos2d Resources */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1203,12 +1183,12 @@
 		3E452D631824063400B4EFDE /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				3ECB2DF718256EF400C82177 /* Extensions */,
-				3ECB2E981825866D00C82177 /* TRBox2D */,
 				3E452E651824063600B4EFDE /* LICENSE_cocos2d.txt */,
 				3E452E741824063600B4EFDE /* LICENSE_CocosDenshion.txt */,
 				3E452E861824063600B4EFDE /* LICENSE_FontLabel.txt */,
 				3E452F191824063800B4EFDE /* LICENSE_Box2D.txt */,
+				3ECB2DF718256EF400C82177 /* Extensions */,
+				3ECB2E981825866D00C82177 /* TRBox2D */,
 				3E452D641824063400B4EFDE /* cocos2d */,
 				3E452E661824063600B4EFDE /* CocosDenshion */,
 				3E452E751824063600B4EFDE /* FontLabel */,
@@ -2116,6 +2096,42 @@
 			);
 			name = Sprites;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		5BCB88711829E412009D6DBF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB2EB718258BAC00C82177 /* Back.png */,
+				3E97293C182837AC00F988F1 /* Boundaries.png */,
+				3E97293A1828379A00F988F1 /* practice_map.tmx */,
+				3ECB2EAA18258BAC00C82177 /* prac_map.tmx */,
+				3ECB2EAF18258BAC00C82177 /* Fore.png */,
+				3ECB2EB318258BAC00C82177 /* pd_dpad-hd.png */,
+				3ECB2EB418258BAC00C82177 /* pd_dpad.png */,
+				3ECB2EB518258BAC00C82177 /* sprites.plist */,
+				3ECB2EB618258BAC00C82177 /* Visible Boundary (Not include in final).png */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		5BCB88721829E47F009D6DBF /* Cocos2d Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E452D4C1824063300B4EFDE /* Default.png */,
+				3E452D4E1824063400B4EFDE /* Default@2x.png */,
+				3E452D501824063400B4EFDE /* Default-568h@2x.png */,
+				3E452D521824063400B4EFDE /* fps_images.png */,
+				3E452D541824063400B4EFDE /* Icon-72.png */,
+				3E452D561824063400B4EFDE /* Icon-Small-50.png */,
+				3E452D581824063400B4EFDE /* Icon-Small.png */,
+				3E452D5A1824063400B4EFDE /* Icon-Small@2x.png */,
+				3E452D5C1824063400B4EFDE /* Icon.png */,
+				3E452D5E1824063400B4EFDE /* Icon@2x.png */,
+				3E452D601824063400B4EFDE /* Info.plist */,
+				3E452D611824063400B4EFDE /* iTunesArtwork */,
+				3E452F2B1824063800B4EFDE /* blocks.png */,
+			);
+			name = "Cocos2d Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
