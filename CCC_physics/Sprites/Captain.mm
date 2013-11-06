@@ -91,7 +91,7 @@
 
 
 -(void)walk {
-    if (_actionState == kActionStateIdle|| _actionState == kActionStateSuperPower) {
+    if (_actionState == kActionStateIdle|| _actionState == kActionStateSuperPower || _actionState == kActionStateCrawl) {
         [self stopAllActions];
         [self runAction:_walkAction];
         _actionState = kActionStateWalk;

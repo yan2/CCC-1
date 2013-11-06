@@ -220,10 +220,12 @@
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
     firstTouch = location;
-    if (location.x <= 2000 / 2) {
+    if (location.x <= 2000 / 2 && location.y >= 150) {
         [player walk];
     }
-    
+    if (location.x <= 2000 / 2 && location.y < 150) {
+        [player crawl];
+    }
     // [player jump];
     
 	return TRUE;
