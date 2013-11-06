@@ -10,7 +10,7 @@
 #import "Box2D.h"
 #import "GameObject.h"
 
-@interface Captain : GameObject {
+@interface Player : GameObject {
     b2Body          *body;
 }
 

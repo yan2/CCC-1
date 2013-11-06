@@ -455,7 +455,7 @@
 		3ECB2ECE1825C9A400C82177 /* HudLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB2ECC1825C9A400C82177 /* HudLayer.mm */; };
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
 		5BCB88841829E6A4009D6DBF /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.m */; };
-		5BCB88871829E702009D6DBF /* Captain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Captain.mm */; };
+		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
 		5BCB88891829EA70009D6DBF /* test_map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5BCB88881829EA70009D6DBF /* test_map.tmx */; };
 /* End PBXBuildFile section */
 
@@ -1098,8 +1098,8 @@
 		5BCB88801829E6A4009D6DBF /* ContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactListener.mm; sourceTree = "<group>"; };
 		5BCB88811829E6A4009D6DBF /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		5BCB88821829E6A4009D6DBF /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		5BCB88851829E702009D6DBF /* Captain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captain.h; sourceTree = "<group>"; };
-		5BCB88861829E702009D6DBF /* Captain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Captain.mm; sourceTree = "<group>"; };
+		5BCB88851829E702009D6DBF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		5BCB88861829E702009D6DBF /* Player.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Player.mm; sourceTree = "<group>"; };
 		5BCB88881829EA70009D6DBF /* test_map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_map.tmx; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -2142,8 +2142,8 @@
 		5BCB887D1829E6A4009D6DBF /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				5BCB88851829E702009D6DBF /* Captain.h */,
-				5BCB88861829E702009D6DBF /* Captain.mm */,
+				5BCB88851829E702009D6DBF /* Player.h */,
+				5BCB88861829E702009D6DBF /* Player.mm */,
 				5BCB887E1829E6A4009D6DBF /* Constants.h */,
 				5BCB887F1829E6A4009D6DBF /* ContactListener.h */,
 				5BCB88801829E6A4009D6DBF /* ContactListener.mm */,
@@ -2641,7 +2641,7 @@
 				3E452DF71824063500B4EFDE /* CCSpriteFrameCache.m in Sources */,
 				3ECB2E0E18257A9800C82177 /* LevelParser.m in Sources */,
 				3E452EF51824063700B4EFDE /* b2DistanceJoint.cpp in Sources */,
-				5BCB88871829E702009D6DBF /* Captain.mm in Sources */,
+				5BCB88871829E702009D6DBF /* Player.mm in Sources */,
 				3E452D971824063400B4EFDE /* CCCamera.m in Sources */,
 				3E452DE81824063500B4EFDE /* CCScene.m in Sources */,
 				3E452D8E1824063400B4EFDE /* CCAnimationCache.m in Sources */,

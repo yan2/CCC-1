@@ -6,10 +6,10 @@
 //  Copyright 2011 Min Kwon. All rights reserved.
 //
 
-#import "Captain.h"
+#import "Player.h"
 #import "Constants.h"
 
-@implementation Captain
+@implementation Player
 @synthesize body;
 
 - (id) init {
