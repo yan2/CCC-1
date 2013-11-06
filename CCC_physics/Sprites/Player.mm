@@ -19,6 +19,7 @@
 	return self;
 }
 
+
 -(void) createBox2dObject:(b2World*)world {
     b2BodyDef playerBodyDef;
 	playerBodyDef.type = b2_dynamicBody;
@@ -41,12 +42,17 @@
 }
 
 -(void) moveRight {
-    b2Vec2 impulse = b2Vec2(7.0f, 0.0f);
-    body->ApplyLinearImpulse(impulse, body->GetWorldCenter());		
+    b2Vec2 impulse = b2Vec2(1.0f, 0.0f);
+    body->ApplyLinearImpulse(impulse, body->GetWorldCenter());
+    body->SetLinearVelocity(b2Vec2(5.0, 0));
+
 }
 
--(void) jump {
+-(void) kangarooJump {
     b2Vec2 impulse = b2Vec2(4.0f, 15.0f);
     body->ApplyLinearImpulse(impulse, body->GetWorldCenter());		    
 }
+
+
+
 @end

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Player.h"
+#import "Captain.h"
+
 #import "ContactListener.h"
 //#import "HumanC.h"
 //#import "DirectionPad.h"
@@ -20,12 +22,15 @@
     CCTMXTiledMap *_tileMap;
     CCSpriteBatchNode *_actors;
 //    HumanC *_human;
-    Player *player;
+    Captain *player;
     ContactListener *contactListener;
     b2World* world;
     CCTMXLayer *_obstacles;
     NSMutableDictionary    *_objects;
     NSMutableArray *_collisionArray;
+    CCSpriteBatchNode *humanSpriteSheet;
+    
+
 }
 
 @property(nonatomic)HudLayer *hud;

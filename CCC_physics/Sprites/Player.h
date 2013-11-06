@@ -12,10 +12,11 @@
 
 @interface Player : GameObject {
     b2Body          *body;
+    
 }
 
 -(void) createBox2dObject:(b2World*)world;
--(void) jump;
+-(void) kangarooJump;
 -(void) moveRight;
 
 @property (nonatomic, readwrite) b2Body *body;
