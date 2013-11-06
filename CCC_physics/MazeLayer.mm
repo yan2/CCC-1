@@ -57,12 +57,11 @@
         [platform setType:kGameObjectPlatform];
         bodyDef.userData = platform;
     }
-    NSLog(@"abouttoif");
     if (uniqueID == 2) {
-         NSLog(@"insideif");
         GameObject *gameOverTile= [[GameObject alloc] init];
         [gameOverTile setType:kGameObjectGameOverTile];
         bodyDef.userData = gameOverTile;
+        NSLog(@"done creating game over tile");
     }
     
 	b2Body *body = world->CreateBody(&bodyDef);
@@ -132,7 +131,7 @@
 					 density:0.0f
 				 restitution:0
 					   boxId:-1
-                        uniqueID:2];
+                    uniqueID:2];
 	}
 }
 
@@ -194,7 +193,6 @@
         [self initTileMap];
 
         [self drawCollisionTiles];
-        
         // just added this in here brah
         [self drawGameOverTiles];
         
