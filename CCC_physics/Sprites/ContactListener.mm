@@ -23,7 +23,7 @@ ContactListener::~ContactListener() {
 void ContactListener::BeginContact(b2Contact *contact) {
 	GameObject *o1 = (GameObject*)contact->GetFixtureA()->GetBody()->GetUserData();
 	GameObject *o2 = (GameObject*)contact->GetFixtureB()->GetBody()->GetUserData();
-	
+    
 	if (IS_PLATFORM(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"-----> Player made contact with platform!");
     }

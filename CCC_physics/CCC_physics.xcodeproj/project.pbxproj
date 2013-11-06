@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31234201182A3F21001BC4B7 /* GameOverScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234200182A3F21001BC4B7 /* GameOverScene.mm */; };
+		31234203182A9209001BC4B7 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 31234202182A9209001BC4B7 /* replay.png */; };
+		31234209182A95B4001BC4B7 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234208182A95B4001BC4B7 /* GameOverLayer.mm */; };
 		3E452D3B1824063300B4EFDE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3A1824063300B4EFDE /* QuartzCore.framework */; };
 		3E452D3D1824063300B4EFDE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3C1824063300B4EFDE /* OpenGLES.framework */; };
 		3E452D3F1824063300B4EFDE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3E1824063300B4EFDE /* OpenAL.framework */; };
@@ -553,6 +555,9 @@
 /* Begin PBXFileReference section */
 		312341FF182A3F21001BC4B7 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		31234200182A3F21001BC4B7 /* GameOverScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameOverScene.mm; sourceTree = "<group>"; };
+		31234202182A9209001BC4B7 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = replay.png; path = "../../../SuperKoalio 2/SuperKoalio/replay.png"; sourceTree = "<group>"; };
+		31234207182A95B4001BC4B7 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Sprites/GameOverLayer.h; sourceTree = "<group>"; };
+		31234208182A95B4001BC4B7 /* GameOverLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameOverLayer.mm; path = ../Sprites/GameOverLayer.mm; sourceTree = "<group>"; };
 		3E452D371824063300B4EFDE /* CCC_physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC_physics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E452D3A1824063300B4EFDE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E452D3C1824063300B4EFDE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1344,6 +1349,8 @@
 				5BCB887D1829E6A4009D6DBF /* Sprites */,
 				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
 				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
+				31234207182A95B4001BC4B7 /* GameOverLayer.h */,
+				31234208182A95B4001BC4B7 /* GameOverLayer.mm */,
 				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
 				3ECB2ECC1825C9A400C82177 /* HudLayer.mm */,
 				3EC0B98A182550CF004CC08D /* SceneManager.mm */,
@@ -2220,6 +2227,7 @@
 		3ECB2E4718257CB800C82177 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				31234202182A9209001BC4B7 /* replay.png */,
 				3ECB2E4818257CB800C82177 /* 0Star-Normal-iPad-hd.png */,
 				3ECB2E4918257CB800C82177 /* 0Star-Normal-iPad.png */,
 				3ECB2E4A18257CB800C82177 /* 0Star-Normal-iPhone-hd.png */,
@@ -2554,6 +2562,7 @@
 				3E4530E318243D4400B4EFDE /* Lat Capt Human-Stand Up0026.png in Resources */,
 				3E45304D18243D4400B4EFDE /* Lat Capt Human-Crawling0015.png in Resources */,
 				3ECB2E8D18257CB800C82177 /* 2Star-Normal-iPad.png in Resources */,
+				31234203182A9209001BC4B7 /* replay.png in Resources */,
 				5B2743C5182A1C3600942895 /* Ant Capt Trainsition-KL005.png in Resources */,
 				3E45304118243D4400B4EFDE /* Lat Capt Human-Crawling0003.png in Resources */,
 				3E45306F18243D4400B4EFDE /* Lat Capt Human-Running0015.png in Resources */,
@@ -2890,6 +2899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E452F101824063700B4EFDE /* b2WeldJoint.cpp in Sources */,
+				31234209182A95B4001BC4B7 /* GameOverLayer.mm in Sources */,
 				3E452DF41824063500B4EFDE /* CCSpriteFrame.m in Sources */,
 				3E452E1B1824063500B4EFDE /* CCTransitionRadial.m in Sources */,
 				3E452D851824063400B4EFDE /* CCActionTiledGrid.m in Sources */,

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "DirectionPad.h"
+#import "GameScene.h"
 
 
 

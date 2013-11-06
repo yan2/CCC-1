@@ -12,7 +12,7 @@
 
 @interface Player : GameObject {
     b2Body          *body;
-    
+    BOOL            contactingGameOver;
 }
 
 -(void) createBox2dObject:(b2World*)world;
@@ -20,4 +20,5 @@
 -(void) moveRight;
 
 @property (nonatomic, readwrite) b2Body *body;
+@property bool contactingGameOver;
 @end

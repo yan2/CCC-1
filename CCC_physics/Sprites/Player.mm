@@ -12,6 +12,9 @@
 	return self;
 }
 
+-(void)startContact {
+    contactingGameOver = true;
+}
 
 -(void) createBox2dObject:(b2World*)world {
     b2BodyDef playerBodyDef;
