@@ -18,6 +18,7 @@
 #import "ChapterSelect.h"
 #import "LevelSelect.h"
 #import "GameScene.h"
+#import "GameOverScene.h"
 
 @interface SceneManager : NSObject {
     

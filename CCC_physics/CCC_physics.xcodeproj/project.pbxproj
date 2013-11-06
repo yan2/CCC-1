@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31234201182A3F21001BC4B7 /* GameOverScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234200182A3F21001BC4B7 /* GameOverScene.mm */; };
 		3E452D3B1824063300B4EFDE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3A1824063300B4EFDE /* QuartzCore.framework */; };
 		3E452D3D1824063300B4EFDE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3C1824063300B4EFDE /* OpenGLES.framework */; };
 		3E452D3F1824063300B4EFDE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3E1824063300B4EFDE /* OpenAL.framework */; };
@@ -460,6 +461,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		312341FF182A3F21001BC4B7 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		31234200182A3F21001BC4B7 /* GameOverScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameOverScene.mm; sourceTree = "<group>"; };
 		3E452D371824063300B4EFDE /* CCC_physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC_physics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E452D3A1824063300B4EFDE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E452D3C1824063300B4EFDE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2089,6 +2092,8 @@
 				3ECB2DFD18256F2B00C82177 /* ChapterSelect.mm */,
 				3EC0B9DA182554B8004CC08D /* MainMenu.mm */,
 				3EC0B9DB182554B8004CC08D /* MainMenu.h */,
+				312341FF182A3F21001BC4B7 /* GameOverScene.h */,
+				31234200182A3F21001BC4B7 /* GameOverScene.mm */,
 				3ECB2EC718258C0900C82177 /* Layers */,
 			);
 			name = Scenes;
@@ -2636,6 +2641,7 @@
 				3E452EFE1824063700B4EFDE /* b2Joint.cpp in Sources */,
 				3E452E331824063600B4EFDE /* ES1Renderer.m in Sources */,
 				3ECB2DE918256BE500C82177 /* Chapter.m in Sources */,
+				31234201182A3F21001BC4B7 /* GameOverScene.mm in Sources */,
 				3E452F201824063800B4EFDE /* AppDelegate.mm in Sources */,
 				3ECB2ECD1825C9A400C82177 /* MazeLayer.mm in Sources */,
 				3E452DF71824063500B4EFDE /* CCSpriteFrameCache.m in Sources */,
