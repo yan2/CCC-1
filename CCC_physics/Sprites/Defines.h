@@ -19,13 +19,25 @@
 #define frandom (float)arc4random()/UINT64_C(0x100000000)
 #define frandom_range(low,high) ((high-low)*frandom)+low
 
+
+// font sizes
+
+#define kFontScaleHuge 6;
+#define kFontScaleLarge 9;
+#define kFontScaleMedium 10;
+#define kFontScaleSmall 12;
+#define kFontScaleTiny 14;
+
+
 // 3 - enumerations
 typedef enum _ActionState {
     kActionStateNone = 0,
     kActionStateIdle,
     kActionStateSuperPower,
     kActionStateWalk,
-    kActionStateFail
+    kActionStateFail,
+    kActionStateCrawl
+    
 } ActionState;
 
 // 4 - structures
@@ -34,5 +46,7 @@ typedef struct _BoundingBox {
     CGRect original;
     
 } BoundingBox;
+
+
 
 #endif

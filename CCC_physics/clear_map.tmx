@@ -20,7 +20,14 @@
   </data>
  </layer>
  <objectgroup name="collisions" width="100" height="20">
-  <object x="21" y="519" width="1051" height="84"/>
-  <object x="1126" y="518" width="1774" height="85"/>
+  <object x="28" y="455" width="836" height="50"/>
+  <object x="1084" y="464" width="1769" height="56"/>
+  <object x="2082" y="269" width="652" height="92"/>
+ </objectgroup>
+ <objectgroup name="gameOverLayer" width="100" height="20">
+  <object x="640" y="585" width="1243" height="18"/>
+ </objectgroup>
+ <objectgroup name="end" width="100" height="20">
+  <object x="2750" y="348" width="115" height="113"/>
  </objectgroup>
 </map>

@@ -115,8 +115,8 @@
 	int x, y, w, h;
 	for (objPoint in [objects objects]) {
         NSLog(@"game over objects detected");
-		x = [[objPoint valueForKey:@"x"] intValue];
-		y = [[objPoint valueForKey:@"y"] intValue];
+		x = [[objPoint valueForKey:@"x"] intValue]/2;
+		y = [[objPoint valueForKey:@"y"] intValue]/2;
 		w = [[objPoint valueForKey:@"width"] intValue]/2;
 		h = [[objPoint valueForKey:@"height"] intValue]/2;
         
@@ -174,7 +174,7 @@
 
 -(void)initTileMap {
    
-    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"test_map.tmx"];
+    _tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"clear_map.tmx"];
     _tileMap.scale = .5;
 	_tileMap.anchorPoint = ccp(0, 0);
 	[self addChild:_tileMap];
@@ -189,7 +189,7 @@
     NSLog(@"init human");
     [humanSpriteSheet addChild:player];
 
-    player.scale = 0.7;
+    player.scale = 0.8;
     player.position = ccp(100, 400);
     [player createBox2dObject:world];
     //[self addChild:player];
@@ -219,6 +219,7 @@
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
+    firstTouch = location;
     if (location.x <= 2000 / 2) {
         [player walk];
     }
@@ -230,8 +231,25 @@
 
 
 -(void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
+    
     if (player.actionState ==kActionStateWalk) {
         [player idle];
+    }
+    
+    NSSet *allTouches = [event allTouches];
+    UITouch * currentTouch = [[allTouches allObjects] objectAtIndex:0];
+    CGPoint location = [currentTouch locationInView: [currentTouch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
+    
+    //Swipe Detection Part 2
+    lastTouch = location;
+    
+    //Minimum length of the swipe
+    float swipeLength = ccpDistance(firstTouch, lastTouch);
+    
+    //Check if the swipe is a left swipe and long enough
+    if (firstTouch.x > lastTouch.x && swipeLength > 60) {
+        [player crawl];
     }
 }
 

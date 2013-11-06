@@ -25,6 +25,8 @@
         //        testSuperpower = [testSuperpower init];
 
         
+        self.crawlAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: [self HumanCrawlAnimation]]];
+
             self.superPowerAction = [CCSequence actions:[CCAnimate actionWithAnimation: [self SuperpowerAnimation]], [CCCallFunc actionWithTarget:self selector:@selector(idle)], nil];
         //
         //Set some initial values for the hero’s attributes, including the measurements from the center of the sprite to the sides and bottom
@@ -106,6 +108,23 @@
     
 }
 
+-(void)crawl {
+    if (_actionState == kActionStateIdle|| _actionState == kActionStateSuperPower ||_actionState == kActionStateWalk) {
+        [self stopAllActions];
+        [self runAction:_crawlAction];
+        _actionState = kActionStateCrawl;
+    }
+    
+    if (_actionState == kActionStateCrawl) {
+        // _velocity = ccp(direction.x * _walkSpeed, direction.y * _walkSpeed);
+        //        if (_velocity.x >= 0) self.scaleX = 1.0;
+        //        else self.scaleX = -1.0;
+        _velocity = ccp(2.0, 0);
+        [super moveRight];
+    }
+    
+}
+
 
 - (CCAnimation *) HumanWalkAnimation {
     
@@ -133,6 +152,21 @@
     
     return idleAnimation;
 }
+
+- (CCAnimation *) HumanCrawlAnimation {
+    
+    CCArray *crawlFrames = [CCArray arrayWithCapacity:8];
+    for (int i = 1; i < 9; i++) {
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"Lat Capt Human-Crawling000%d.png", i]];
+        [crawlFrames addObject:frame];
+    }
+    
+    CCAnimation *crawl = [CCAnimation animationWithFrames:[crawlFrames getNSArray] delay:1.0/12.0];
+    
+    return crawl;
+    
+}
+
 
 - (CCAnimation *) SuperpowerAnimation {
     //action animation - runs once and then returns to idle

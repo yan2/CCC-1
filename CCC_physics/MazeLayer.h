@@ -19,6 +19,8 @@
     NSMutableDictionary *_endTilesDictionary;
     NSMutableArray *_collisionArray;
     CCSpriteBatchNode *humanSpriteSheet;
+    CGPoint firstTouch;
+    CGPoint lastTouch;
 
 }
 
