@@ -44,6 +44,13 @@
 
 }
 
+-(void) crawling {
+    b2Vec2 impulse = b2Vec2(1.0f, 0.0f);
+    body->ApplyLinearImpulse(impulse, body->GetWorldCenter());
+    body->SetLinearVelocity(b2Vec2(6.5, 0));
+    
+}
+
 -(void) kangarooJump {
     b2Vec2 impulse = b2Vec2(4.0f, 15.0f);
     body->ApplyLinearImpulse(impulse, body->GetWorldCenter());		    

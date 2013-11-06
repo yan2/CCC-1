@@ -93,7 +93,7 @@
 		w = [[objPoint valueForKey:@"width"] intValue]/2;
 		h = [[objPoint valueForKey:@"height"] intValue]/2;
         
-		CGPoint _point=ccp(x+w/2,y+h/2);
+		CGPoint _point=ccp(x+w/2,y+h);
 		CGPoint _size=ccp(w,h);
         
 		[self makeBox2dObjAt:_point
@@ -224,7 +224,10 @@
         [player walk];
     }
     if (location.x <= 2000 / 2 && location.y < 150) {
+        //player.position = ccp(player.position.x, player.position.y-50);
         [player crawl];
+        ;
+
     }
     // [player jump];
     

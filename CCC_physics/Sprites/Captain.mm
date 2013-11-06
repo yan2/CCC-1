@@ -112,6 +112,7 @@
                  [self stopAllActions];
                  [self runAction:_crawlAction];
                  _actionState = kActionStateCrawl;
+        self.position = ccp(self.position.x, self.position.y-200);
              }
      
          if (_actionState == kActionStateCrawl) {
