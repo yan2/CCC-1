@@ -22,7 +22,7 @@
  <objectgroup name="collisions" width="100" height="20">
   <object x="28" y="455" width="836" height="50"/>
   <object x="1084" y="464" width="1769" height="56"/>
-  <object x="2082" y="269" width="652" height="92"/>
+  <object x="2082" y="269" width="654" height="99"/>
  </objectgroup>
  <objectgroup name="gameOverLayer" width="100" height="20">
   <object x="640" y="585" width="1243" height="18"/>
