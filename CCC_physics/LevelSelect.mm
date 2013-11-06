@@ -38,12 +38,13 @@
 
 - (void)addBackButton {
 
-    NSString *normal = [NSString stringWithFormat:@"Arrow-Normal-%@.png", self.device];
-    NSString *selected = [NSString stringWithFormat:@"Arrow-Selected-%@.png", self.device];        
+    NSString *normal = [NSString stringWithFormat:@"Back Arrow.png"];
+    NSString *selected = [NSString stringWithFormat:@"Back Arrow.png"];        
     CCMenuItemImage *goBack = [CCMenuItemImage itemFromNormalImage:normal 
                                                      selectedImage:selected
                                                             target:self 
                                                           selector:@selector(onBack:)];
+    goBack.scale = .5;
     CCMenu *back = [CCMenu menuWithItems: goBack, nil];
      
     if (self.iPad) {
