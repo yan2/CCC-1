@@ -104,7 +104,7 @@
     
 	int x, y, w, h;
 	for (objPoint in [objects objects]) {
-        NSLog(@"collision objects detected");
+        NSLog(@"game over objects detected");
 		x = [[objPoint valueForKey:@"x"] intValue];
 		y = [[objPoint valueForKey:@"y"] intValue];
 		w = [[objPoint valueForKey:@"width"] intValue]/2;
@@ -182,6 +182,10 @@
         [self initTileMap];
 
         [self drawCollisionTiles];
+        
+        // just added this in here brah
+        [self drawGameOverTiles];
+        
         player = [Player spriteWithFile:@"Lat Capt Human-Standing0001.png"];
         player.scale = 0.5;
         player.position = ccp(100, 400);

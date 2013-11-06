@@ -12,7 +12,7 @@
 
 #define IS_PLAYER(x, y)         (x.type == kGameObjectPlayer || y.type == kGameObjectPlayer)
 #define IS_PLATFORM(x, y)       (x.type == kGameObjectPlatform || y.type == kGameObjectPlatform)
-
+#define IS_GAMEOVERTILE(x, y)   (x.type == kGameObjectGameOverTile || y.type == kGameObjectGameOverTile)
 
 ContactListener::ContactListener() {
 }
@@ -27,6 +27,9 @@ void ContactListener::BeginContact(b2Contact *contact) {
 	if (IS_PLATFORM(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"-----> Player made contact with platform!");
     }
+    if (IS_GAMEOVERTILE(o1, o2) && IS_PLAYER(o1, o2)) {
+        CCLOG(@"~!~!~!~ Player made contact with death tiles brah");
+    }
 }
 
 void ContactListener::EndContact(b2Contact *contact) {
@@ -35,6 +38,9 @@ void ContactListener::EndContact(b2Contact *contact) {
     
 	if (IS_PLATFORM(o1, o2) && IS_PLAYER(o1, o2)) {
         CCLOG(@"-----> Player lost contact with platform!");
+    }
+    if (IS_GAMEOVERTILE(o1, o2) && IS_PLAYER(o1, o2)) {
+        CCLOG(@"~!~!~!~ Player made contact with death tiles brah");
     }
 }
 
