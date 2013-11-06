@@ -98,6 +98,33 @@
 	}
 }
 
+- (void) drawGameOverTiles {
+	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"gameOverLayer"];
+	NSMutableDictionary * objPoint;
+    
+	int x, y, w, h;
+	for (objPoint in [objects objects]) {
+        NSLog(@"collision objects detected");
+		x = [[objPoint valueForKey:@"x"] intValue];
+		y = [[objPoint valueForKey:@"y"] intValue];
+		w = [[objPoint valueForKey:@"width"] intValue]/2;
+		h = [[objPoint valueForKey:@"height"] intValue]/2;
+        
+		CGPoint _point=ccp(x+w/2,y+h);
+		CGPoint _size=ccp(w,h);
+        
+		[self makeBox2dObjAt:_point
+					withSize:_size
+					 dynamic:false
+					rotation:0
+					friction:1.5f
+					 density:0.0f
+				 restitution:0
+					   boxId:-1];
+	}
+}
+
+
 -(void) setupPhysicsWorld {
     
     b2Vec2 gravity = b2Vec2(0.0f, -9.8f);
