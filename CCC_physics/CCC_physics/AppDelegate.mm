@@ -34,9 +34,9 @@
         CC_ENABLE_DEFAULT_GL_STATES();
         CCDirector *director = [CCDirector sharedDirector];
         CGSize size = [director winSize];
-        CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
+        CCSprite *sprite = [CCSprite spriteWithFile:@"Splash.png"];
         sprite.position = ccp(size.width/2, size.height/2);
-        sprite.rotation = -90;
+        sprite.rotation = -180;
         [sprite visit];
         [[director openGLView] swapBuffers];
         CC_ENABLE_DEFAULT_GL_STATES();
@@ -98,7 +98,7 @@
 	[director setAnimationInterval:1.0/60];
 	[director setDisplayFPS:YES];
 	if(GAME_AUTOROTATION == kGameAutorotationUIViewController) {
-        [director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
+        [director setDeviceOrientation:kCCDeviceOrientationLandscapeRight];
     }
 	
 	// make the OpenGLView a child of the view controller

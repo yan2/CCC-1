@@ -11,11 +11,27 @@
 #import "DirectionPad.h"
 //#import "GameScene.h"
 
-
+#define MAX_HEALTH_TOKENS 10
+#define MAX_DIGITS 5
 
 @interface HudLayer : CCLayer {
+    CCSprite *healthTokens[MAX_HEALTH_TOKENS]; // weak references
+    
+    CCSprite *energyBar;
+    int currentHealth;
+    CCSprite *digits[MAX_DIGITS];  // weak references
+    CCSpriteFrame *digitFrame[10]; // weak references
+    
+    
+    
     
 }
-@property(nonatomic)DirectionPad *dPad;
+-(id) init;
+-(void) setHealth:(int) health;
+
+
+-(void) setScore:(float) score;
+
+
 
 @end

@@ -4,9 +4,15 @@
 #import "cocos2d.h"
 #import "Defines.h"
 
+
+
+
 @interface Captain : Player {
     
 }
+
+
+
 
 //actions
 @property(nonatomic,strong) CCAction *idleAction;

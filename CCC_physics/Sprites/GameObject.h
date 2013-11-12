@@ -11,7 +11,21 @@
 
 @interface GameObject : CCSprite {
     GameObjectType  type;
+    GameObjectStatus dl;
 }
 
 @property (nonatomic, readwrite) GameObjectType type;
+@property (nonatomic, readwrite) GameObjectStatus dl;
+@end
+@interface ConsumableObject : GameObject
+{
+@protected
+    bool consumed;
+}
+-(void)consume;
+@end
+
+@interface Apple : ConsumableObject
+{
+}
 @end

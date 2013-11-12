@@ -3,12 +3,12 @@
 #import "cocos2d.h"
 #import "Player.h"
 #import "Captain.h"
-
+#import "Box2D.h"
 #import "ContactListener.h"
-#import "HudLayer.h"
 
+   @class HudLayer;
 
-@interface MazeLayer : CCLayer <DirectionPadDelegate> {
+@interface MazeLayer : CCLayer {
     CCTMXTiledMap *_tileMap;
     CCSpriteBatchNode *_actors;
     Captain *player;
@@ -21,9 +21,11 @@
     CCSpriteBatchNode *humanSpriteSheet;
     CGPoint firstTouch;
     CGPoint lastTouch;
+    HudLayer *hud;
+  
 
 }
-
+-(void) removeBody:(b2Body*) b;;
 @property(nonatomic)HudLayer *hud;
 @property(nonatomic)CCArray *collisions;
 

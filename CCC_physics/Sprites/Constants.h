@@ -17,5 +17,12 @@ typedef enum {
     kGameObjectPlayer,
     kGameObjectPlatform,
     kGameObjectGameOverTile,
-    kGameObjectEndTile
+    kGameObjectEndTile,
+    kGameObjectCollectible,
+    kGameObjectEaten
 } GameObjectType;
+
+
+typedef enum {
+    eaten
+} GameObjectStatus;

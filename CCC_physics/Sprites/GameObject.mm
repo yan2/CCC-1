@@ -7,9 +7,13 @@
 //
 
 #import "GameObject.h"
+#import "Player.h"
+
 
 @implementation GameObject
 @synthesize type;
+@synthesize dl;
+
 
 - (id)init
 {
@@ -41,4 +45,41 @@
     [super dealloc];
 }
 
+@end
+@implementation ConsumableObject
+
+-(void) consume
+{
+    if(!consumed)
+    {
+        // set consumed
+        consumed = YES;
+        
+        // fade & shrink object
+        // and delete after animation
+        [self runAction:
+         [CCSequence actions:
+          [CCSpawn actions:
+           [CCFadeOut actionWithDuration:0.1],
+           [CCScaleTo actionWithDuration:0.2 scale:0.0],
+           nil],
+          [CCCallFunc actionWithTarget:self selector:@selector(deleteNow)],
+          nil]
+         ];
+        
+         }
+}
+
+@end
+
+@implementation Apple
+
+-(void)consumeApple:(Player *) p
+{
+    if(!consumed)
+    {
+        [p restoreHealth:1];
+        [self consume];
+    }
+}
 @end

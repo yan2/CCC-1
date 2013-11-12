@@ -9,6 +9,9 @@
  <tileset firstgid="2512" name="Visible Boundary (Not include in final)" tilewidth="32" tileheight="32" spacing="1" margin="1">
   <image source="Visible Boundary (Not include in final).png" width="3937" height="558"/>
  </tileset>
+ <tileset firstgid="4416" name="Apple" tilewidth="32" tileheight="32">
+  <image source="Apple.png" width="62" height="69"/>
+ </tileset>
  <layer name="back" width="100" height="20">
   <data encoding="base64" compression="zlib">
    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
@@ -22,7 +25,7 @@
  <objectgroup name="collisions" width="100" height="20">
   <object x="31" y="481" width="831" height="60"/>
   <object x="1045" y="482" width="1677" height="68"/>
-  <object x="2142" y="91" width="537" height="335"/>
+  <object x="2146" y="92" width="537" height="335"/>
  </objectgroup>
  <objectgroup name="gameOverLayer" width="100" height="20">
   <object x="480" y="608" width="1152" height="32"/>
@@ -30,4 +33,10 @@
  <objectgroup name="end" width="100" height="20">
   <object x="2723" y="483" width="356" height="81"/>
  </objectgroup>
+ <objectgroup name="collectibles" width="100" height="20">
+  <object x="1136" y="146" width="48" height="36"/>
+  <object x="1424" y="282" width="50" height="40"/>
+  <object x="676" y="484" width="130" height="178"/>
+ </objectgroup>
+ <imagelayer name="Image Layer 1" width="100" height="20" visible="0"/>
 </map>

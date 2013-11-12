@@ -148,7 +148,7 @@
     _hudLayer = [HudLayer node];
     [self addChild:_hudLayer z:1];
     
-    _hudLayer.dPad.delegate = _mazeLayer;
+//    _hudLayer.dPad.delegate = _mazeLayer;
     _mazeLayer.hud = _hudLayer;
     
 }

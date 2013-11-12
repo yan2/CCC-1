@@ -7,6 +7,8 @@
 
 
 
+
+
 -(id)init {
     NSLog(@"CAPTAIN: INIT");
     if (self = [super init]){
@@ -41,8 +43,6 @@
     NSLog(@"captain init but without frame");
     return self;
 }
-
-
 
 
 #define JUMP_TAG 1001
@@ -112,7 +112,7 @@
                  [self stopAllActions];
                  [self runAction:_crawlAction];
                  _actionState = kActionStateCrawl;
-        self.position = ccp(self.position.x, self.position.y-200);
+        self.position = ccp(self.position.x, self.position.y);
              }
      
          if (_actionState == kActionStateCrawl) {
