@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		31234201182A3F21001BC4B7 /* GameOverScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234200182A3F21001BC4B7 /* GameOverScene.mm */; };
 		31234209182A95B4001BC4B7 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31234208182A95B4001BC4B7 /* GameOverLayer.mm */; };
-		3138F9DC182AEB31006961D7 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3138F9DB182AEB31006961D7 /* hurt.wav */; };
-		3138F9DE182AEB3B006961D7 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3138F9DD182AEB3B006961D7 /* jump.wav */; };
-		3138F9E0182AEEB7006961D7 /* sbm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3138F9DF182AEEB7006961D7 /* sbm.mp3 */; };
 		3E452D3B1824063300B4EFDE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3A1824063300B4EFDE /* QuartzCore.framework */; };
 		3E452D3D1824063300B4EFDE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3C1824063300B4EFDE /* OpenGLES.framework */; };
 		3E452D3F1824063300B4EFDE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E452D3E1824063300B4EFDE /* OpenAL.framework */; };
@@ -564,6 +561,9 @@
 		5B2743C7182A1C3600942895 /* Ant Capt Trainsition-KL007.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B274370182A1C3500942895 /* Ant Capt Trainsition-KL007.png */; };
 		5B2743C8182A1C3600942895 /* Ant Capt Trainsition-KL008.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B274371182A1C3500942895 /* Ant Capt Trainsition-KL008.png */; };
 		5B2743C9182A1C3600942895 /* Ant Capt Trainsition-KL009.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B274372182A1C3500942895 /* Ant Capt Trainsition-KL009.png */; };
+		5BB581F3183330BF00A9F330 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F0183330BF00A9F330 /* hurt.wav */; };
+		5BB581F4183330BF00A9F330 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F1183330BF00A9F330 /* jump.wav */; };
+		5BB581F5183330BF00A9F330 /* sbm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F2183330BF00A9F330 /* sbm.mp3 */; };
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
 		5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.mm */; };
 		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
@@ -575,9 +575,6 @@
 		31234200182A3F21001BC4B7 /* GameOverScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameOverScene.mm; sourceTree = "<group>"; };
 		31234207182A95B4001BC4B7 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Sprites/GameOverLayer.h; sourceTree = "<group>"; };
 		31234208182A95B4001BC4B7 /* GameOverLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameOverLayer.mm; path = ../Sprites/GameOverLayer.mm; sourceTree = "<group>"; };
-		3138F9DB182AEB31006961D7 /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hurt.wav; path = ../../../hurt.wav; sourceTree = "<group>"; };
-		3138F9DD182AEB3B006961D7 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = jump.wav; path = ../../../jump.wav; sourceTree = "<group>"; };
-		3138F9DF182AEEB7006961D7 /* sbm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sbm.mp3; path = ../../../sbm.mp3; sourceTree = "<group>"; };
 		3E452D371824063300B4EFDE /* CCC_physics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCC_physics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E452D3A1824063300B4EFDE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E452D3C1824063300B4EFDE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1319,6 +1316,9 @@
 		5B274370182A1C3500942895 /* Ant Capt Trainsition-KL007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ant Capt Trainsition-KL007.png"; sourceTree = "<group>"; };
 		5B274371182A1C3500942895 /* Ant Capt Trainsition-KL008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ant Capt Trainsition-KL008.png"; sourceTree = "<group>"; };
 		5B274372182A1C3500942895 /* Ant Capt Trainsition-KL009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ant Capt Trainsition-KL009.png"; sourceTree = "<group>"; };
+		5BB581F0183330BF00A9F330 /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hurt.wav; sourceTree = "<group>"; };
+		5BB581F1183330BF00A9F330 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		5BB581F2183330BF00A9F330 /* sbm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sbm.mp3; sourceTree = "<group>"; };
 		5BCB887E1829E6A4009D6DBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5BCB887F1829E6A4009D6DBF /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
 		5BCB88801829E6A4009D6DBF /* ContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactListener.mm; sourceTree = "<group>"; };
@@ -1409,9 +1409,7 @@
 		3E452D4B1824063300B4EFDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3138F9DF182AEEB7006961D7 /* sbm.mp3 */,
-				3138F9DD182AEB3B006961D7 /* jump.wav */,
-				3138F9DB182AEB31006961D7 /* hurt.wav */,
+				5BB581EF183330BF00A9F330 /* Audio */,
 				5BF2F81F182ADFB900413FFD /* UI */,
 				3EBD914B182ABD9500ABC143 /* Buttons */,
 				5B274318182A1C3500942895 /* KangarooTransform */,
@@ -2477,6 +2475,16 @@
 			path = To;
 			sourceTree = "<group>";
 		};
+		5BB581EF183330BF00A9F330 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5BB581F0183330BF00A9F330 /* hurt.wav */,
+				5BB581F1183330BF00A9F330 /* jump.wav */,
+				5BB581F2183330BF00A9F330 /* sbm.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		5BCB88711829E412009D6DBF /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -2613,7 +2621,7 @@
 				3E45309D18243D4400B4EFDE /* Lat Capt Human-Standing0036.png in Resources */,
 				3E45309318243D4400B4EFDE /* Lat Capt Human-Standing0026.png in Resources */,
 				3EC0B9C518255119004CC08D /* Arrow-Normal-iPhone.png in Resources */,
-				3138F9DC182AEB31006961D7 /* hurt.wav in Resources */,
+				5BB581F3183330BF00A9F330 /* hurt.wav in Resources */,
 				3E4530EF18243D4400B4EFDE /* Lat Capt Human-To Crawl Transition0009.png in Resources */,
 				3E45309218243D4400B4EFDE /* Lat Capt Human-Standing0025.png in Resources */,
 				3E4530A418243D4400B4EFDE /* Lat Capt Human-Standing0043.png in Resources */,
@@ -2727,6 +2735,7 @@
 				5B2743AF182A1C3600942895 /* Ant Capt Trainsition-KL0011.png in Resources */,
 				3EBD914A182ABC7600ABC143 /* Sky.png in Resources */,
 				3E45305F18243D4400B4EFDE /* Lat Capt Human-Leaping0009.png in Resources */,
+				5BB581F5183330BF00A9F330 /* sbm.mp3 in Resources */,
 				5B2548EA182A42B50015204D /* KangarooIcon.png in Resources */,
 				3E45309718243D4400B4EFDE /* Lat Capt Human-Standing0030.png in Resources */,
 				3E45308518243D4400B4EFDE /* Lat Capt Human-Standing0012.png in Resources */,
@@ -2919,9 +2928,8 @@
 				5B274389182A1C3600942895 /* Lat Capt KL-Jumping003.png in Resources */,
 				3E4530B518243D4400B4EFDE /* Lat Capt Human-Standing0060.png in Resources */,
 				3EC0B9C218255119004CC08D /* Arrow-Normal-iPad-hd.png in Resources */,
-				3138F9E0182AEEB7006961D7 /* sbm.mp3 in Resources */,
 				3E45305118243D4400B4EFDE /* Lat Capt Human-Crawling0019.png in Resources */,
-				3138F9DE182AEB3B006961D7 /* jump.wav in Resources */,
+				5BB581F4183330BF00A9F330 /* jump.wav in Resources */,
 				5B2743B1182A1C3600942895 /* Ant Capt Trainsition-KL0013.png in Resources */,
 				3ECB2E9118257CB800C82177 /* 3Star-Normal-iPad.png in Resources */,
 				5B27437C182A1C3600942895 /* Lat Capt KL-Jumping0018.png in Resources */,
