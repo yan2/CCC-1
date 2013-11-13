@@ -193,7 +193,7 @@
         CGRect testRect = CGRectMake(w, h, x, y);
         [[UIColor redColor] set]; // red team color
         UIRectFill(testRect); // this will fill the upper rect all red,
-//        [self addChild:testRect];
+
         
 		[self makeBox2dObjAt:_point
 					withSize:_size

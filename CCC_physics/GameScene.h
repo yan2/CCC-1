@@ -11,6 +11,7 @@
 #import "MazeLayer.h"
 #import "HudLayer.h"
 #import "ContactListener.h"
+#import "SimpleAudioEngine.h"
 
 @interface GameScene : CCLayer {
     b2World *world;

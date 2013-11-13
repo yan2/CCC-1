@@ -6,8 +6,9 @@
 #import "cocos2d.h"
 #import "Defines.h"
 #import "SceneManager.h"
-
-@interface MainMenu : CCLayer {
+#import <MediaPlayer/MediaPlayer.h>
+#import "CCVideoPlayer.h"
+@interface MainMenu : CCLayer <CCVideoPlayerDelegate>{
     
 }
 

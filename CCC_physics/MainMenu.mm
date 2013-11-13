@@ -74,35 +74,47 @@
         [CCMenuItemFont setFontName:@"Marker Felt"];
         [CCMenuItemFont setFontSize:smallFont];
         
-        // Create font based items ready for CCMenu
+
+//        //CREATE MOVIE
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Opening Sequence" ofType:@"mov"];
+//        NSURL *movieURL = [NSURL fileURLWithPath:path];
+//        
+//        MPMoviePlayerViewController *mp= [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
+//        [[mp moviePlayer] setMovieControlMode:MPMovieControlModeHidden];
+//        [[mp moviePlayer] controlStyle:MPMovieControlStyleFullscreen];
+//        
+//        
+//        [[[[CCDirector sharedDirector] openGLView] window] addSubview:mp.view];
+//        [[mp moviePlayer] play];
+        
         
 
-        CCMenuItemImage *learn = [CCMenuItemImage itemFromNormalImage:@"learn.png"
-                                                        selectedImage:@"learn.png"
-                                                               target:self
-                                                             selector:@selector(onLearningModules:)];
-        learn.scale = .5;
-        learn.zOrder = -50;
+//        CCMenuItemImage *learn = [CCMenuItemImage itemFromNormalImage:@"learn.png"
+//                                                        selectedImage:@"learn.png"
+//                                                               target:self
+//                                                             selector:@selector(onLearningModules:)];
+//        learn.scale = .5;
+//        learn.zOrder = -50;
+//        
+//        CCMenu *learnMenu = [CCMenu menuWithItems: learn, nil];
+//        [self addChild:learnMenu];
+//        learnMenu.position = ccp(0,0);
+//        
+//        CCMenuItemImage *explore = [CCMenuItemImage itemFromNormalImage:@"explore.png"
+//                                                          selectedImage:@"explore.png"
+//                                                                 target:self
+//                                                               selector:@selector(onPlay:)];
+//        
         
-        CCMenu *learnMenu = [CCMenu menuWithItems: learn, nil];
-        [self addChild:learnMenu];
-        learnMenu.position = ccp(0,0);
-        
-        CCMenuItemImage *explore = [CCMenuItemImage itemFromNormalImage:@"explore.png"
-                                                          selectedImage:@"explore.png"
-                                                                 target:self
-                                                               selector:@selector(onPlay:)];
-        
-        
-        explore.zOrder = -50;
-        CCMenu *exploreMenu = [CCMenu menuWithItems: explore, nil];
-        [self addChild:exploreMenu];
-        explore.scale = .5;
-        exploreMenu.position = ccp(screenSize.width,screenSize.height/2);
-
-        
-        CCSprite *background = [CCSprite spriteWithFile:@"mainBackground.jpg"];
-        background.position = ccp(screenSize.width/2, screenSize.height/2);
+//        explore.zOrder = -50;
+//        CCMenu *exploreMenu = [CCMenu menuWithItems: explore, nil];
+//        [self addChild:exploreMenu];
+//        explore.scale = .5;
+//        exploreMenu.position = ccp(screenSize.width,screenSize.height/2);
+//
+//        
+        CCSprite *background = [CCSprite spriteWithFile:@"Opening Page.png"];
+        background.position = ccp(screenSize.width/2+70, screenSize.height/2-60);
         background.scale = .5;
         background.zOrder = -100;
         [self addChild:background];
@@ -121,13 +133,63 @@
         //        gameData.sound = 0;
         
         [GameDataParser saveData:gameData];
-        
-        
+        [CCVideoPlayer setDelegate: self];
+        [CCVideoPlayer playMovieWithFile:@"Opening Sequence.m4v"];
         
         self.iPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
-        
+//        [self playInstructionsVideo];
     }
     return self;
 }
+
+
+//- (void)playInstructionsVideo
+//{
+//    MPMoviePlayerController * _moviePlayer;
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"01 - Fit Test" ofType:@"mp4"]];
+//    _moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(moviePlayBackDidFinish)
+//                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+//                                               object:_moviePlayer];
+//    
+//    [_moviePlayer respondsToSelector:@selector(setFullscreen:animated:)];
+//    _moviePlayer.controlStyle = MPMovieControlStyleNone;
+//    _moviePlayer.shouldAutoplay = YES;
+//    _moviePlayer.repeatMode = MPMovieRepeatModeOne;
+////    _moviePlayer.view.frame = CGRectMake(0, 0, 300, 300);
+//    
+//    UIView* glView = [CCDirector sharedDirector].openGLView; // attention
+//    [glView.superview insertSubview:_moviePlayer.view atIndex:0]; // attention
+//    glView.opaque = NO; // attention
+//    glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // attention
+//}
+
+- (void) moviePlaybackFinished {
+//    [[CCDirector sharedDirector] startAnimation];
+    CCLOG(@"movieplaybackfinished");
+}
+
+-(void) movieStartsPlaying {
+    [[CCDirector sharedDirector] stopAnimation];
+     CCLOG(@"moviestarts");
+}
+//
+//- (void)moviePlayBackDidFinish:(NSNotification *)notification
+//{
+//    MPMoviePlayerController *moviePlayer = [notification object];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self
+//                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+//                                                  object:moviePlayer];
+//    
+//    // If the moviePlayer.view was added to the openGL view, it needs to be removed
+//    if ([moviePlayer respondsToSelector:@selector(setFullscreen:animated:)])
+//    {
+//        [moviePlayer.view removeFromSuperview];
+//    }
+//    
+//    [moviePlayer release];
+//}
+//
 
 @end
