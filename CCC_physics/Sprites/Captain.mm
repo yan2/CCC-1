@@ -10,12 +10,10 @@
 -(id)init {
     NSLog(@"CAPTAIN: INIT");
     if (self = [super init]){
-        //if ((self = [super initWithSpriteFrameName:@"Lat Capt Human-Standing0001.png"])) {
             NSLog(@"init human");
         
         //Set idle action
             self.idleAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self HumanIdleAnimation]]];
-        
         
         //Set walk action
             self.walkAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation: [self HumanWalkAnimation]]];
@@ -34,10 +32,8 @@
             self.hitPoints = 100.0;
             self.damage = 20.0;
             self.walkSpeed = 80;
-        
-        
-   // }
-}
+
+    }
     NSLog(@"captain init but without frame");
     return self;
 }
@@ -78,7 +74,7 @@
 }
 
 -(void)superPower {
-    if (_actionState == kActionStateIdle || _actionState == kActionStateSuperPower || _actionState == kActionStateWalk) {
+    if (_actionState == kActionStateIdle || _actionState == kActionStateSuperPower){ //|| _actionState == kActionStateWalk) {
         [self stopAllActions];
         [self runAction:_superPowerAction];
         _actionState = kActionStateSuperPower;

@@ -564,6 +564,8 @@
 		5BB581F3183330BF00A9F330 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F0183330BF00A9F330 /* hurt.wav */; };
 		5BB581F4183330BF00A9F330 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F1183330BF00A9F330 /* jump.wav */; };
 		5BB581F5183330BF00A9F330 /* sbm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BB581F2183330BF00A9F330 /* sbm.mp3 */; };
+		5BB581FB183344F500A9F330 /* Superpower.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BB581FA183344F500A9F330 /* Superpower.mm */; };
+		5BB581FE18334CCD00A9F330 /* Kangaroo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BB581FD18334CCD00A9F330 /* Kangaroo.mm */; };
 		5BCB88831829E6A4009D6DBF /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88801829E6A4009D6DBF /* ContactListener.mm */; };
 		5BCB88841829E6A4009D6DBF /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88821829E6A4009D6DBF /* GameObject.mm */; };
 		5BCB88871829E702009D6DBF /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB88861829E702009D6DBF /* Player.mm */; };
@@ -1319,6 +1321,11 @@
 		5BB581F0183330BF00A9F330 /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hurt.wav; sourceTree = "<group>"; };
 		5BB581F1183330BF00A9F330 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		5BB581F2183330BF00A9F330 /* sbm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sbm.mp3; sourceTree = "<group>"; };
+		5BB581F9183344F500A9F330 /* Superpower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Superpower.h; path = Superpower/Superpower.h; sourceTree = "<group>"; };
+		5BB581FA183344F500A9F330 /* Superpower.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Superpower.mm; path = Superpower/Superpower.mm; sourceTree = "<group>"; };
+		5BB581FC18334CCD00A9F330 /* Kangaroo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kangaroo.h; path = Superpower/Kangaroo.h; sourceTree = "<group>"; };
+		5BB581FD18334CCD00A9F330 /* Kangaroo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Kangaroo.mm; path = Superpower/Kangaroo.mm; sourceTree = "<group>"; };
+		5BB581FF18334ED000A9F330 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		5BCB887E1829E6A4009D6DBF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5BCB887F1829E6A4009D6DBF /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
 		5BCB88801829E6A4009D6DBF /* ContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactListener.mm; sourceTree = "<group>"; };
@@ -1383,13 +1390,6 @@
 		3E452D4A1824063300B4EFDE /* CCC_physics */ = {
 			isa = PBXGroup;
 			children = (
-				5BCB887D1829E6A4009D6DBF /* Sprites */,
-				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
-				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
-				31234207182A95B4001BC4B7 /* GameOverLayer.h */,
-				31234208182A95B4001BC4B7 /* GameOverLayer.mm */,
-				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
-				3ECB2ECC1825C9A400C82177 /* HudLayer.mm */,
 				3EC0B98A182550CF004CC08D /* SceneManager.mm */,
 				3EC0B994182550CF004CC08D /* SceneManager.h */,
 				3E452F1E1824063800B4EFDE /* AppDelegate.h */,
@@ -1399,6 +1399,9 @@
 				3E452F271824063800B4EFDE /* GLES-Render.h */,
 				3E452F281824063800B4EFDE /* GLES-Render.mm */,
 				3E452F2A1824063800B4EFDE /* GameConfig.h */,
+				5BB581F81833433E00A9F330 /* Superpower */,
+				5BCB887D1829E6A4009D6DBF /* Sprites */,
+				5BB581F61833315700A9F330 /* Layers */,
 				3ECB2EC618258BF800C82177 /* Scenes */,
 				3E452D4B1824063300B4EFDE /* Resources */,
 				3E452F1A1824063800B4EFDE /* Supporting Files */,
@@ -2485,6 +2488,30 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		5BB581F61833315700A9F330 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB2EC91825C9A400C82177 /* MazeLayer.h */,
+				3ECB2ECA1825C9A400C82177 /* MazeLayer.mm */,
+				31234207182A95B4001BC4B7 /* GameOverLayer.h */,
+				31234208182A95B4001BC4B7 /* GameOverLayer.mm */,
+				3ECB2ECB1825C9A400C82177 /* HudLayer.h */,
+				3ECB2ECC1825C9A400C82177 /* HudLayer.mm */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		5BB581F81833433E00A9F330 /* Superpower */ = {
+			isa = PBXGroup;
+			children = (
+				5BB581F9183344F500A9F330 /* Superpower.h */,
+				5BB581FA183344F500A9F330 /* Superpower.mm */,
+				5BB581FC18334CCD00A9F330 /* Kangaroo.h */,
+				5BB581FD18334CCD00A9F330 /* Kangaroo.mm */,
+			);
+			name = Superpower;
+			sourceTree = "<group>";
+		};
 		5BCB88711829E412009D6DBF /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -2525,6 +2552,7 @@
 		5BCB887D1829E6A4009D6DBF /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				5BB581FF18334ED000A9F330 /* Defines.h */,
 				5B274339182A1C3500942895 /* CCC_first.plist */,
 				5B27433A182A1C3500942895 /* CCC_first.png */,
 				5BCB88851829E702009D6DBF /* Player.h */,
@@ -3107,6 +3135,8 @@
 				3E452E091824063500B4EFDE /* CCTMXLayer.m in Sources */,
 				3ECB2E1418257A9800C82177 /* Levels.m in Sources */,
 				3E452ECE1824063700B4EFDE /* b2Island.cpp in Sources */,
+				5BB581FE18334CCD00A9F330 /* Kangaroo.mm in Sources */,
+				5BB581FB183344F500A9F330 /* Superpower.mm in Sources */,
 				3ECB2EA01825866D00C82177 /* GB2ShapeCache.mm in Sources */,
 				3E452E441824063600B4EFDE /* MacWindow.m in Sources */,
 				3E452DC91824063400B4EFDE /* CCParticleBatchNode.m in Sources */,
